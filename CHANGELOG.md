@@ -6,7 +6,8 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ### Added — Phase B Discovery (2026-10-04)
 - 11 verified dataset cards (`docs/datasets/DS-0001`–`DS-0011`): Sentinel-2, Sentinel-1, Landsat 8/9, NASA FIRMS, NASA Black Marble, World Bank Global Gas Flaring Database, VIIRS Nightfire (DISPLAY ONLY / RESTRICTED), GEM Global Oil Infrastructure Tracker, SkyTruth Cerulean, OCHA HDX Venezuela COD-AB, OpenStreetMap.
-- Registry rows for all 11 datasets in `registry/datasets.csv` with license, access date (2026-10-04), redistribution rights and MVP relevance score.
+- 4 more cards from leads surfaced in a separate private research workspace (public third-party datasets only): OGIM v3.0 infrastructure database (`DS-0012`), TROPOMI CH4 (`DS-0013`), EMIT CH4 plumes (`DS-0014`), EDGAR_2025_GHG gridmaps (`DS-0015`).
+- Registry rows for all 15 datasets in `registry/datasets.csv` with license, access date (2026-10-04), redistribution rights and MVP relevance score.
 
 ### Added — Sprint 0 (2026-10-04)
 - Platform-independent agent system: `AGENTS.md` (single source) + `CLAUDE.md` import + 13 role skills in `.claude/skills/` (read by Devin, Claude Code, OpenCode) + OpenCode slash-command wrappers (ADR-000).
