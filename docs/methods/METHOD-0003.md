@@ -46,5 +46,7 @@ Supplementary (not scored): at the same point, ascending geometry (track 4) step
 - **Limitations:** the detected object is at the Lagunillas shoreline/terminal (open-water fraction in a ~230 m neighbourhood = 0.24), i.e. a nearshore/port setting, not open lake; radar cannot distinguish a jack-up rig from a moored barge or a wharf change; a single 4-px object; reference event is press-based (identity coincidence, not ground truth). Confidence Moderate.
 - **Next (v0.2, pre-registered):** apply the detector to other terminals (TAECJAA/La Salina) for vessel-presence tests with independent AIS-style ground truth; add a shoreline-clutter mask tuned to port areas; try SLC/coherence for structural change.
 
+Native-resolution crops around the detection for QGIS: `py -3 scripts/method0003_zoom_export.py` writes per-scene and composite GeoTIFFs (~10 m, EPSG:32619) plus the detection point to `data/derived/method-0003/v0.1/lagunillas_zoom/` (git-ignored).
+
 ## Status
 - Executed 2026-10-05 (v0.1.0; pre-registered in b28e66c). Validated scope-limited.
