@@ -90,10 +90,10 @@ def main():
         (OUT / f"{t}_results.json").write_text(json.dumps(allres[t], indent=2),
                                                encoding="utf-8")
     verdict = {
-        "T-fire": allres["T-fire"].get("components", 0) >= 1,
-        "C-urban": allres["C-urban"].get("components", 99) <= 1
-                   and allres["C-urban"].get("pct_over_threshold", 99) < 0.5,
-        "T-neg": allres["T-neg"].get("pct_over_threshold", 99) < 0.5,
+        "T-fire": bool(allres["T-fire"].get("components", 0) >= 1),
+        "C-urban": bool(allres["C-urban"].get("components", 99) <= 1
+                        and allres["C-urban"].get("pct_over_threshold", 99) < 0.5),
+        "T-neg": bool(allres["T-neg"].get("pct_over_threshold", 99) < 0.5),
     }
     verdict["validated"] = all(verdict.values())
     allres["verdict"] = verdict

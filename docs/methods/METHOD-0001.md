@@ -78,3 +78,18 @@ Scope change: land detector only (dNBR interannual same-season). The Alula platf
 - Rationale: both windows sit in the dry season → seasonal drying cancels in the interannual difference; the fire scar (if persistent) appears only in post.
 - Known risk: fire on industrial surfaces may not produce dNBR ≥ 0.27 (v0.2 finding) — a fail here is recorded as "no detectable burn scar at 20 m", not hidden.
 - Method validated for land-change use only if ALL THREE pass.
+
+## v0.3 results (2026-10-04; script `scripts/method0001_v03.py`; outputs `data/derived/method-0001/v0.3/` + manifest; 8+8 scenes per test)
+| Test | Result | Pass? |
+|---|---|---|
+| T-fire José | 663 px (0.32%) over threshold, 40 small components — scattered industrial-surface changes; no coherent burn scar visible | letter-pass, **not a fire detection** |
+| C-urban Valencia | 0.074% pixels (criterion <0.5% ✓) but 15 components (criterion ≤1) | **FAIL** — urban areas have real small changes; component-count criterion unrealistic |
+| T-neg Bajo Grande | 5.9% pixels, 463 components | **FAIL** — control-design error: the ±5.5 km box contains all of Cabimas (real urban change) + lake wetlands, not just the refinery; strong change blob at the tank-farm area (consistent with reported storage activity, Chevron/Boscan — Reuters 2025-04) |
+
+![T-fire](figures/METHOD-0001-v0.3-T-fire.png)
+![T-neg](figures/METHOD-0001-v0.3-T-neg.png)
+*Contains modified Copernicus Sentinel data 2024–2026 (processed by VEIO).*
+
+- **Verdict: NOT validated (as registered).** No Derived observations added to dossiers.
+- What v0.3 did prove: interannual same-month windows killed the seasonal confounder (José: 51% → 0.32% over threshold); the remaining failures are control-design errors, not detector noise.
+- **v0.4 requirements (pre-registered):** (1) control criteria on area share only (<0.5%), drop component counts; (2) negative control = small box on static industrial surfaces only (exclude cities/wetlands) — or accept that "inactive asset" boxes include real surrounding change and test only the facility footprint; (3) fire-scar claims require a coherent component (≥50 px) adjacent to the reported incident point — scattered small components do not constitute detection.

@@ -75,3 +75,8 @@
 - Pre-registered 0001/0004 v0.2 in 93b9b25 before running. 0001: dNBR = seasonal drying (C2 fail); water detector hits algal blooms (77 non-specific). 0004: CRP halt z=-0.12 (2/5 event days valid); Maracaibo Aug-Oct +40% < 1.5x. Author error: 0001 used adjacent, not same-season, windows.
 - Corrections: AST-0014 AOI was an OGIM offshore point 29 km away (José = 750 hotspots/30d, not 122/27d); v0.1 "Maracaibo ~x2" withdrawn (seasonal artefact). Figures in docs/methods/figures/.
 - Open: v0.3 rules (same-month windows, bloom gate or SAR for platforms, availability check before event tests). Validated so far: METHOD-0002 differential/density only.
+
+## 2026-10-04 — devin (GLM) — METHOD-0001 v0.3 executed (not validated; controls redesigned)
+- Interannual same-month dNBR (pre-registered 6755ad1). Seasonal confounder fixed (José 51%→0.32%). Verdict: NOT validated — C-urban failed on component count (15>1, criterion unrealistic), T-neg box contained all of Cabimas + wetlands (control-design error; strong change at tank-farm area consistent with reported Chevron storage ops). Fire scar not detectable as coherent signature at 20 m.
+- v0.4 rules pre-registered in method note (area-share criteria; facility-footprint negative control; coherent-component requirement for fire claims).
+- Open: v0.4 run or pivot to METHOD-0003 SAR (Alula test lives there). Next: user pick.

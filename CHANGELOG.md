@@ -4,6 +4,9 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — METHOD-0001 v0.3 run (2026-10-04)
+- Interannual same-month dNBR (Dec-Jan 2024/25 vs 2025/26), pre-registered in `6755ad1` before execution. Verdict: NOT validated as registered — but the seasonal confounder is fixed (José 51% → 0.32% over threshold); remaining failures are control-design errors (urban component-count criterion; "negative" box contained all of Cabimas). v0.4 control rules pre-registered in the method note. Fire scar not detectable as a coherent signature at 20 m.
+
 ### Changed — METHOD-0001/0004 v0.2 runs + corrections (2026-10-04)
 - v0.2 designs pre-registered in commit `93b9b25` before execution; both executed with visual outputs (RGB composites, change maps, daily/monthly series) and figures committed under `docs/methods/figures/`.
 - METHOD-0001 v0.2: NOT validated (dNBR confounded by seasonal drying; water detector non-specific vs algal blooms; land control failed). Root cause: adjacent instead of same-season windows (author error, documented).
