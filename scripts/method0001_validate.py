@@ -94,7 +94,7 @@ def composite(lon, lat, window):
             print(f"  skip scene {item.id}: {type(e).__name__}")
     if used == 0:
         return None, 0
-    med = {b: np.nanmedian(np.stack(acc[b])) for b in acc}
+    med = {b: np.nanmedian(np.stack(acc[b]), axis=0) for b in acc}  # per-pixel
     return med, used
 
 

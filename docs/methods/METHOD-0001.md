@@ -27,9 +27,10 @@
 | CTRL_Cariaco | 10/6 | -0.130→-0.028 | — | 0.0 |
 | CTRL_Chichiriviche | 1/7 | -0.041→-0.040 | — | 0.0 |
 
-- **Verdict: INCONCLUSIVE / FAILED as designed.** Three design flaws found:
+- **Verdict: INCONCLUSIVE / FAILED as designed.** Four design flaws found:
   1. Reference events lack surface expression at 10–20 m (a FCC unit restart is not optically visible); only 1 of 3 references testable (CRP 5-day halt out of scope for composites — deviation documented; El Palito spill: insufficient cloud-free scenes).
   2. Control AOIs poorly chosen (ocean-dominated → degenerate thresholds).
   3. Seasonal confounder: windows straddle dry→wet transition; NDVI/NDBI shifts are seasonal, not event-driven.
+  4. Script bug: band medians were computed as scalars (missing `axis=0`) — per-pixel change was never computed in v0.1.0; `disturbed_pct` was degenerate. Fixed in script; re-run required for v0.2.
 - **Redesign requirements (pre-registered for v0.2):** same-season window pairs (±same months in adjacent years); land-based control AOIs; event types with surface expression (construction, clearing, tank farm changes); threshold from control distribution on land pixels.
 - No Derived observations added to dossiers — nothing validated.
