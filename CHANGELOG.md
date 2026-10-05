@@ -4,6 +4,9 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — METHOD-0001 pilot run (2026-10-04)
+- Optical disturbance pipeline (`scripts/method0001_validate.py`, Sentinel-2 L2A via Planetary Computer; outputs `data/derived/method-0001/` with manifest). Validation verdict: INCONCLUSIVE/FAILED as designed — reference events lack surface expression at 10–20 m, ocean-dominated controls, seasonal confounder. Redesign requirements pre-registered (same-season pairs, land controls, surface-expression events). No Derived observations added to dossiers.
+
 ### Added — METHOD-0002 validation run (2026-10-04)
 - First executed geo-method: FIRMS hotspot time series (`scripts/method0002_validate.py`, outputs `data/derived/method-0002/` with manifest). Validation history v0.1.0→v0.3.0 recorded: site-level detection FAILS (36–66% < 80%); validated as cluster-density and facility-differential indicator (controls clean; Amuay 284/30d vs Bajo Grande 0/0).
 - Derived observations added to dossiers AST-0001, 0002, 0004, 0012, 0014 with manifest references; METHOD-0002 note updated with results, verdict and documented deviations.

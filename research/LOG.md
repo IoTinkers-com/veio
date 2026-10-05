@@ -56,3 +56,8 @@
 - Honest result: site-level detection FAILS pre-registered 80% (36.4% r1.5 / 66.2% r5.0); validated as cluster-density (SB 1,046/30d) and facility-differential (Amuay 284/27d, José 122/27d, El Palito 36/18d vs Bajo Grande 0) indicator; controls 0%. Deviations documented (radius, per-facility AOIs, event-test substitution).
 - Derived observations added to AST-0001/0002/0004/0012/0014. Traps: FIRMS API path is /api/area/csv/ (not area_csv); DAY_RANGE max 5; chunk joins need explicit newlines.
 - Open: OGIM↔FIRMS coordinate/method mismatch [GAP]; remaining methods pending. Next: METHOD-0001/0004 or MVP packaging on user pick.
+
+## 2026-10-04 — devin (GLM) — METHOD-0001 pilot executed (inconclusive, documented)
+- S2 L2A via Planetary Computer; pipeline works end-to-end (composites, NDVI/NDBI change, controls) after fixing PROJ conflict, CRS transform, out_shape and L2A offset (memory note added).
+- Verdict: INCONCLUSIVE/FAILED as designed — FCC restart not optically visible; ocean controls; seasonal confounder. Redesign pre-registered in METHOD-0001 (same-season pairs, land controls, surface-expression events). No dossier observations added.
+- Open: METHOD-0001 v0.2 redesign; METHOD-0004 pending. Next: user pick (redesign, METHOD-0004, MVP packaging).
