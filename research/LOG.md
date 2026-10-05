@@ -24,3 +24,9 @@
 - Shortlist validated by user. Brief: docs/briefs/FEATURE-asset-dossier-v0.1.md. Registry assets.csv created (AST-0001..0004).
 - Dossiers AST-0001..0004 (CRP Paraguaná, El Palito, Morón, Bajo Grande) with dated sources (Reuters 2025-05/2026-07, Wikipedia, Notitarde 2026-04); OGIM flaring associations (LECHOSO, ENSANADA 2026-09-14); coord discrepancies flagged [GAP].
 - Open: scientific-review gate for batch 1; Morón/Bajo Grande coords need imagery validation. Next: batch 2 (Faja upgraders) on user go.
+
+## 2026-10-04 — devin (GLM) — Scientific review batch 1 + dossier batch 2 (Faja upgraders)
+- Review batch 1: zero blockers, 4 minor fixes applied (inline citations for rankings, approximate date flag). Commit 44d4e7f.
+- Shortlist corrected (v0.1.1): Sincor = Petrocedeño (not Petroanzoátegui = Petro San Félix); all four upgraders at José complex, Anzoátegui.
+- Dossiers AST-0005..0008 written: San Félix (off line ~2019, areas → Petro Roraima 2024), Sinovensa (blending 165k b/d, steadiest), Petrocedeño (fires 2025-11-19 Reuters), Petropiar (Chevron license wind-down 2025-03, scenarios 105-138k bpd).
+- Open: Argus article dates [UNVERIFIED]; exact upgrader coords [GAP]; scientific-review batch 2. Next: batch 3 (conventional fields) on user go.

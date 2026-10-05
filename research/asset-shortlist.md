@@ -21,10 +21,12 @@
 ### Faja del Orinoco (heavy oil, upgraders)
 | AST | Asset | State | OGIM anchor |
 |---|---|---|---|
-| AST-0005 | Petroanzoátegui (Sincor legacy) | Anzoátegui/Monagas | well clusters [coords to validate] |
+| AST-0005 | Petro San Félix (ex-PetroAnzoátegui), 100% PdV | Anzoátegui (upgrader at José) | well clusters [coords to validate] |
 | AST-0006 | Petrolera Sinovensa | Anzoátegui | well clusters [coords to validate] |
-| AST-0007 | Petrocedeño (Junín) | Bolívar/Guárico | well clusters [coords to validate] |
-| AST-0008 | Petropiar (Hamaca) | Anzoátegui/Bolívar | well clusters [coords to validate] |
+| AST-0007 | Petrocedeño (ex-Sincor; minority Total/Equinor) | Anzoátegui (upgrader at José) | well clusters [coords to validate] |
+| AST-0008 | Petropiar (Hamaca; minority Chevron) | Anzoátegui (upgrader at José) | well clusters [coords to validate] |
+
+Correction v0.1.1 (2026-10-04): research during dossier prep showed Sincor = Petrocedeño (not Petroanzoátegui) and all four upgraders located at the José complex, Anzoátegui — not Bolívar/Guárico as first drafted.
 
 ### Conventional fields
 | AST | Asset | State | OGIM anchor |
