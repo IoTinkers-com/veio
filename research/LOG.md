@@ -80,3 +80,9 @@
 - Interannual same-month dNBR (pre-registered 6755ad1). Seasonal confounder fixed (José 51%→0.32%). Verdict: NOT validated — C-urban failed on component count (15>1, criterion unrealistic), T-neg box contained all of Cabimas + wetlands (control-design error; strong change at tank-farm area consistent with reported Chevron storage ops). Fire scar not detectable as coherent signature at 20 m.
 - v0.4 rules pre-registered in method note (area-share criteria; facility-footprint negative control; coherent-component requirement for fire claims).
 - Open: v0.4 run or pivot to METHOD-0003 SAR (Alula test lives there). Next: user pick.
+
+## 2026-10-05 — devin (GLM) — METHOD-0003 v0.1 executed (VALIDATED, scope-limited)
+- SAR via Sentinel-1 RTC (Planetary Computer): S1A descending track 171, 7 pre / 11 post scenes 2025. Detector = per-scene brightness persistence (VV ≥ −8 dB in ≥90% post, 0% pre) over pre-dark water. Pre-registered b28e66c, then run.
+- Result: 1 new persistent object at Lagunillas 10.13715/−71.2703, first bright 2025-09-01, persistent to 2025-12-30, peak +20 dB; confirmed in ascending track 4; both open-lake controls 0 → VALIDATED for "new persistent bright object"; NOT for identity or open-water detection (eastern-lake ~55 m screening found none).
+- Derived observation added to AST-0009 (compatible with reported Alula jack-up, Reuters 2025-09-04; identity undetermined). Figure + manifest in repo. Discovery used to pin params (documented); scratch scripts removed.
+- Open: v0.2 (terminal vessel-presence with independent ground truth; port clutter mask; SLC/coherence). Validated so far: METHOD-0002 (differential/density), METHOD-0003 (bright-object, scope-limited).

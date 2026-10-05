@@ -7,3 +7,4 @@ One Markdown note per trap in this folder; add a line here when a trap is discov
 - [Rasterio/PROJ + Planetary Computer quirks](rasterio-proj-planetary-computer.md) — PROJ_LIB to wheel's proj_data; transform bbox to raster CRS; fixed out_shape; S2 L2A offset.
 - [AOI coordinates: OGIM terminal records are offshore loading points](aoi-coordinate-verification.md) — verify AOIs against OSM + ON_OFFSHORE before any method run.
 - [VNP46/LAADS: tile convention and access quirks](vnp46-laads-quirks.md) — CMR for URLs; h00 exists (lon0=-180+h*10); v07=10..20N; SDS path with space; filter s3:// links.
+- [Sentinel-1 on Planetary Computer: use RTC, not GRD](sentinel1-rtc-planetary-computer.md) — GRD `vv`/`vh` COGs have no CRS; RTC is gamma0 float32 (water not masked); cache windowed reads.

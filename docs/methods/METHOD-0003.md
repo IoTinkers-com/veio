@@ -29,5 +29,22 @@
 - Expected false positives: near-shore/port clutter, moored vessels, seasonal wind roughening, construction; partial swaths at box edges.
 - Known limitations: radar does not reveal flag/operator/identity; a target moving between acquisitions is removed by the median; the 2022–2024 constellation gap does not affect 2025 coverage.
 
+## v0.1 results (2026-10-05; script `scripts/method0003_validate.py`; outputs `data/derived/method-0003/v0.1/` + manifest; 7 pre + 11 post scenes)
+| Test | Result | Pass? |
+|---|---|---|
+| T-Alula Lagunillas | **1** new persistent bright object at 10.13715 / −71.2703 (4 px); bright (VV ≥ −8 dB) in 11/11 post scenes and 0/7 pre scenes; first bright 2025-09-01; max change +20.1 dB | **pass** |
+| C-water-1 southern lake | 0 qualifying objects | pass |
+| C-water-2 western lake | 0 qualifying objects | pass |
+
+Supplementary (not scored): at the same point, ascending geometry (track 4) steps from −4/−6 dB (Jun–Aug) to +0…+5 dB (Sep–Nov) — the change is visible in two independent geometries, consistent with a physical object rather than a wind artifact. An independent eastern-lake screening at ~55 m found no compact new persistent object in open water (only 3 isolated 1-px coastal detections).
+
+![T-Alula](figures/METHOD-0003-v0.1-ALULA.png)
+*Contains modified Copernicus Sentinel data 2025 (processed by VEIO).*
+
+- **Verdict: VALIDATED (scope-limited).** Passed all pre-registered criteria (b28e66c): ≥1 new persistent radar-bright object in the Lagunillas box in the reported month, and 0 in both open-lake controls. One Derived observation added to AST-0009.
+- **Scope:** validated only for *detecting a new persistent radar-bright object over pre-window dark water* in a fixed box. **Not** validated for object identity, for vessel counts, or for open-water platform/vessel detection (screening negative).
+- **Limitations:** the detected object is at the Lagunillas shoreline/terminal (open-water fraction in a ~230 m neighbourhood = 0.24), i.e. a nearshore/port setting, not open lake; radar cannot distinguish a jack-up rig from a moored barge or a wharf change; a single 4-px object; reference event is press-based (identity coincidence, not ground truth). Confidence Moderate.
+- **Next (v0.2, pre-registered):** apply the detector to other terminals (TAECJAA/La Salina) for vessel-presence tests with independent AIS-style ground truth; add a shoreline-clutter mask tuned to port areas; try SLC/coherence for structural change.
+
 ## Status
-- Pre-registered 2026-10-05 (design committed before execution). No derived product exists yet.
+- Executed 2026-10-05 (v0.1.0; pre-registered in b28e66c). Validated scope-limited.

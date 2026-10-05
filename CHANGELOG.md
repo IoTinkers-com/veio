@@ -4,6 +4,11 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — METHOD-0003 v0.1 run (2026-10-05)
+- First SAR method: Sentinel-1 RTC VV (S1A descending track 171), pre-registered in `b28e66c` before execution; outputs `data/derived/method-0003/v0.1/` with manifest + checksums, figure under `docs/methods/figures/`.
+- **Verdict: VALIDATED (scope-limited).** One new persistent radar-bright object detected at Lagunillas (10.13715/−71.2703), bright in 11/11 post-window scenes vs 0/7 pre, first observed 2025-09-01, confirmed in ascending geometry; both open-lake controls 0. Validated only for "new persistent bright object over pre-window dark water", not for identity or open-water platform/vessel detection (eastern-lake screening negative).
+- Derived observation added to AST-0009 (compatible with the reported Alula jack-up arrival, Reuters 2025-09-04; identity undetermined).
+
 ### Added — METHOD-0001 v0.3 run (2026-10-04)
 - Interannual same-month dNBR (Dec-Jan 2024/25 vs 2025/26), pre-registered in `6755ad1` before execution. Verdict: NOT validated as registered — but the seasonal confounder is fixed (José 51% → 0.32% over threshold); remaining failures are control-design errors (urban component-count criterion; "negative" box contained all of Cabimas). v0.4 control rules pre-registered in the method note. Fire scar not detectable as a coherent signature at 20 m.
 

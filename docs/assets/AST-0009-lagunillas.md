@@ -21,7 +21,7 @@
 | 2025-09 | ecopoliticavenezuela.org | Platform presence documented; environmental debate recorded | Low (civil-society analysis) |
 
 ## Change indicators
-- None yet — requires geo-method derived products (v0.2).
+- **Derived** (METHOD-0003 v0.1, Sentinel-1 RTC VV, S1A descending track 171; pre-registered `b28e66c`, run 2026-10-05): a **new persistent radar-bright object** (VV ≥ −8 dB in 11/11 post-window scenes vs 0/7 pre-window; peak change +20.1 dB) first observed **2025-09-01** at **10.13715 / −71.2703** (Lagunillas shoreline area, ~0.4 km from the reported CCRC office), persisting through 2025-12-30. **Compatible with** the reported Alula jack-up arrival (Reuters, 2025-09-04); radar does not establish identity (rig/vessel/structure). Confidence Moderate. Manifest: `data/derived/method-0003/v0.1/manifest.json`, figure `docs/methods/figures/METHOD-0003-v0.1-ALULA.png`. Open-water screening of the eastern lake found no new object in open water.
 
 ## Environmental observations
 - Legacy environmental impacts discussed by civil-society sources (ecopoliticavenezuela.org, 2025-09) — **Source-recorded**; no independent verification; no cause claims.
@@ -33,10 +33,11 @@
 - **Interpretation:** Chinese-backed reactivation marks a documented investment shift in a legacy field; 60k bpd target is a company goal, not an observed outcome. Never merge with observations.
 
 ## Provenance
-- DS-0012 OGIM v3.0 (accessed 2026-10-04) · totalnewsagency.com 2025-09-07 (2026-10-04) · eldiariotricolor.com 2025-09-05 (2026-10-04) · fedecamarasradio.com (2026-10-04) · ecopoliticavenezuela.org (2026-10-04)
+- DS-0012 OGIM v3.0 (accessed 2026-10-04) · totalnewsagency.com 2025-09-07 (2026-10-04) · eldiariotricolor.com 2025-09-05 (2026-10-04) · fedecamarasradio.com (2026-10-04) · ecopoliticavenezuela.org (2026-10-04) · reuters.com 2025-09-04 (2026-10-05) · DS-0002 Sentinel-1 RTC via Planetary Computer, scene IDs in `data/derived/method-0003/v0.1/manifest.json` (2026-10-05)
 
 ## Limitations
-- Production figures are source-reported, not measured by us; Tía Juana sub-area not separately sourced; no imagery-derived observations yet.
+- Production figures are source-reported, not measured by us; Tía Juana sub-area not separately sourced; field-cluster coordinates still [GAP].
+- Radar observation is a single 4-px object at the Lagunillas shoreline (not open lake); identity undetermined; the September 2025 step is coincident with, but does not prove, the reported Alula arrival.
 
 ## Confidence
 - Moderate — recent, consistent wire-service reporting; targets unverified.
