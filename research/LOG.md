@@ -66,3 +66,6 @@
 - VNP46A3 monthly via LAADS/CMR (user EDL token in .secrets/); 27 tiles, 9 months, 8 AOIs. Tile convention trap fixed via file attrs (h00 exists; v07=10..20N) — memory note added.
 - Verdict: NOT validated (1/4 directional; controls unstable; monthly can't see 5-day events; Lagunillas AOI coords dead [GAP]). Candidate observation: Maracaibo lights ~x2 2023→2025 (pending validation). Redesign pre-registered.
 - Open: METHOD-0001 v0.2 + METHOD-0004 v0.2 redesigns; AOI coords validation. Next: MVP packaging or redesigns on user pick.
+
+## 2026-10-04 — devin (GLM) — MVP packaging + first push
+- README EN/ES updated: repo map (assets/briefs/methods/reviews/scripts) + status (15 datasets, 17 dossiers, 4 methods). Pushed to origin; branch protection next.

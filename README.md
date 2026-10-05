@@ -15,8 +15,13 @@
 | `.claude/skills/` | 13 role skills (read by Devin, Claude Code, OpenCode) |
 | `docs/engineering-rules.md`, `docs/security.md`, `docs/architecture/scalability.md` | Binding engineering/security baseline |
 | `docs/adr/` | Architecture decision records |
+| `docs/briefs/` | Feature briefs (dossier v0.1, change indicators v0.2) |
+| `docs/methods/` | Geo-method notes — hypothesis + validation plan + results |
+| `docs/assets/`, `registry/assets.csv` | Asset Dossiers (AST-0001..0017) and asset registry |
+| `docs/datasets/`, `registry/datasets.csv` | Dataset cards (DS-0001..0015) and matrix |
+| `docs/reviews/` | Scientific review records |
+| `scripts/` | Method validation scripts (reproducible, manifested outputs) |
 | `docs/foundation/` | Technical & Product Foundation |
-| `docs/datasets/`, `registry/datasets.csv` | Dataset cards and matrix |
 | `templates/` | Card/ADR/brief/dossier templates |
 | `.agents/memory/` | Known traps for agents |
 | `research/LOG.md` | Cross-tool session log |
@@ -24,7 +29,7 @@
 Companion private repository `veio-internal` holds RESTRICTED material (funding, partners, sensitive data notes). It is referenced, never mirrored, here.
 
 ## Status
-Sprint 0 — Discovery & Foundation. No product code yet; see `docs/foundation/` and the roadmap.
+MVP evidence base in place: 15 verified dataset cards, 17 Asset Dossiers v0.1 (reviewed), 4 geo-method notes (1 validated as differential/density indicator, 2 redesigns pre-registered). No web product yet — Atlas UI is Sprint 2+.
 
 ## Contributing
 See `CONTRIBUTING.md`. Contributions follow a review workflow (Submitted → Under Review → Validated/Rejected/Superseded) with history preserved.
