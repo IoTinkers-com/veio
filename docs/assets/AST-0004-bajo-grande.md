@@ -1,6 +1,6 @@
 # AST-0004 — Refinería Bajo Grande
 
-**Bottom line:** Smallest CRP refinery (16k bpd, asphalt-focused); sources report out-of-service since 2018-11-06 with sporadic restart attempts; recent status [GAP].
+**Bottom line:** Smallest CRP refinery per P+ portfolio (16k bpd, asphalt-focused); sources report out-of-service since 2018-11-06 with sporadic restart attempts; recent status [GAP].
 
 ## Identity
 - asset_id: AST-0004 · type: refinery · name: Refinería Bajo Grande · operator: PDVSA (built 1956 by Richmond, later Chevron; nationalized 1976) — Source-recorded: EN Wikipedia Paraguaná complex + P+ portfolio (accessed 2026-10-04)
@@ -34,7 +34,7 @@
 - **Interpretation:** Multi-year out-of-service reporting plus 2020 restart intent without confirmed follow-through suggests prolonged inactivity; imagery analysis required before any status conclusion. Never merge with observations.
 
 ## Provenance
-- DS-0012 OGIM v3.0 (accessed 2026-10-04) · EN Wikipedia Paraguaná Refinery Complex (accessed 2026-10-04) · fedecamarasradio.com (article ~2020-06, accessed 2026-10-04) · portfolio-pplus.azurewebsites.net Site 358 (updated 2025-05-31, accessed 2026-10-04)
+- DS-0012 OGIM v3.0 (accessed 2026-10-04) · EN Wikipedia Paraguaná Refinery Complex (accessed 2026-10-04) · fedecamarasradio.com (article ~2020-06 [date approximate], accessed 2026-10-04) · portfolio-pplus.azurewebsites.net Site 358 (updated 2025-05-31, accessed 2026-10-04)
 
 ## Limitations
 - No dated source on actual restart outcome after 2020 [GAP]; coordinate discrepancy unresolved; no imagery-derived observations yet.

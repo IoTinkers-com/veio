@@ -1,6 +1,6 @@
 # AST-0001 — Centro de Refinación Paraguaná (Amuay–Cardón)
 
-**Bottom line:** Second-largest refinery complex worldwide (955k bpd nominal); sources report sustained partial operation (~20%) with recurring unit outages and no major repairs in 2026.
+**Bottom line:** Second-largest refinery complex worldwide (es Wikipedia; 955k bpd nominal); sources report sustained partial operation (~20%) with recurring unit outages and no major repairs in 2026.
 
 ## Identity
 - asset_id: AST-0001 · type: refinery complex · name: Centro de Refinación Paraguaná (CRP), comprising Amuay and Cardón refineries · operator: PDVSA — Source-recorded: Wikipedia ES + EN Wikipedia (accessed 2026-10-04)

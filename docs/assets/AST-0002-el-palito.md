@@ -1,6 +1,6 @@
 # AST-0002 — Refinería El Palito
 
-**Bottom line:** Smallest of Venezuela's active refineries (140k bpd nominal); sources report refurbishment since 2022 under Iranian contracts, with production reaching nominal capacity in June 2023 and recurring outages.
+**Bottom line:** Refinery of 140k bpd nominal (fourth-largest in country per EN Wikipedia); sources report refurbishment since 2022 under Iranian contracts, production reaching nominal capacity in June 2023, and multiple outages reported 2017–2025.
 
 ## Identity
 - asset_id: AST-0002 · type: refinery · name: Refinería El Palito · operator: PDVSA — Source-recorded: EN/es Wikipedia (accessed 2026-10-04)
