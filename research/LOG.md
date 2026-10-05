@@ -40,3 +40,8 @@
 - AST-0014 José/TAECJAA (20.5M bbl Feb 2025 official; Petropars tank rehab), AST-0015 La Salina (Blend 22, tanker queue Apr 2025, hull-staining leaks), AST-0016 Temblador tank yard (evidence thin [GAP]; candidate for swap), AST-0017 offshore (Dragon: license 2023→revoked 2025→re-authorized [UNVERIFIED]; 4/5 platforms unidentified).
 - Registry assets.csv complete: AST-0001..0017 (17/17).
 - Open: scientific-review batches 2–4; Temblador candidate swap decision; Dragon license re-verify <90 d. Next: reviews.
+
+## 2026-10-04 — devin (GLM) — Scientific review batches 2–4 (complete)
+- Zero blockers; 2 corrections applied: AST-0011 "persistent"→same-day detections; AST-0012 count 43→33 (verified vs extract; largest name-cluster confirmed). Record: docs/reviews/2026-10-04-dossiers-batches-2-4.md.
+- Dossier v0.1 complete: 17/17 assets, all claims dated+cited, interpretations separated, ethics/licensing pass.
+- Open: Temblador swap decision; Dragon license re-verify <90 d; imagery validation of flagged coords; bilingual .es.md pass before Atlas. Next: geo-method briefs for change indicators (v0.2) or MVP packaging.

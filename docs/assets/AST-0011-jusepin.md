@@ -30,7 +30,7 @@
 - Strong spatial association: JUSEPIN DEEP detections (DS-0012, 2026-09-14); Jusepín 200 plant explicitly aimed at capturing gas otherwise flared (2001online) — **Source-recorded**.
 
 ## Interpretation (separate)
-- **Interpretation:** Persistent flaring detections despite compression projects aimed at flaring reduction suggest gap between capture capacity and utilization. Never merge with observations.
+- **Interpretation:** Multiple same-day flaring detections (2026-09-14) despite compression projects aimed at flaring reduction suggest a gap between capture capacity and utilization. Never merge with observations.
 
 ## Provenance
 - DS-0012 OGIM v3.0 (accessed 2026-10-04) · woodmac.com report 552896 (2026-10-04) · ciip.com.ve (2026-10-04) · 2001online.com ([date UNVERIFIED], 2026-10-04) · elperiodicodemonagas.com.ve (2026-10-04)
