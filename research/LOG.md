@@ -68,4 +68,5 @@
 - Open: METHOD-0001 v0.2 + METHOD-0004 v0.2 redesigns; AOI coords validation. Next: MVP packaging or redesigns on user pick.
 
 ## 2026-10-04 — devin (GLM) — MVP packaging + first push
-- README EN/ES updated: repo map (assets/briefs/methods/reviews/scripts) + status (15 datasets, 17 dossiers, 4 methods). Pushed to origin; branch protection next.
+- README EN/ES updated: repo map (assets/briefs/methods/reviews/scripts) + status (15 datasets, 17 dossiers, 4 methods). Pushed 89aad88..d9c3bc8 to IoTinkers-com/veio. Branch protection ON: required checks CI/secrets+CI/docs, no force-push, admins bypass.
+- Open: METHOD-0001/0004 v0.2 redesigns; AOI coords; bilingual pass of dossiers; Temblador swap. Next: user pick.
