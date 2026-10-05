@@ -21,7 +21,7 @@
 | 2026-09-14 | DS-0012 OGIM | 33 flaring detections across Santa Bárbara/Sur cluster (19 + 14; largest name-cluster in extract) | Moderate (dataset; method unpublished [GAP]) |
 
 ## Change indicators
-- None yet — requires geo-method derived products (v0.2).
+- **Derived** (METHOD-0002 v0.3.0, manifest `data/derived/method-0002/manifest.json`): 1,046 thermal hotspot detections within 5 km of the Santa Bárbara/Sur cluster over 30 days (2026-09-04..10-03) — dense persistent thermal activity compatible with extensive flaring; largest cluster tested in the VE extract. Confidence Moderate. Remaining methods: pending.
 
 ## Environmental observations
 - Dense flaring cluster observed (DS-0012) — detections only; no volume, efficiency or cause claims.

@@ -50,3 +50,9 @@
 - Brief: docs/briefs/FEATURE-change-indicators-v0.2.md. Method notes METHOD-0001..0004 (optical disturbance, FIRMS hotspots, SAR, Black Marble lights) — hypothesis + validation plan pre-registered, acceptance criteria set, negative results to be recorded.
 - Implementation order agreed in brief: 002 FIRMS (cheapest) → 001 optical → 004 lights → 003 SAR. Nothing executed yet; no derived products exist.
 - Open: METHOD-#### prefix not in §12 conventions (added de facto); validation reference events are press-based (confidence cap Moderate). Next: execute METHOD-0002 validation or MVP packaging on user pick.
+
+## 2026-10-04 — devin (GLM) — METHOD-0002 executed and validated (partial)
+- FIRMS API via user MapKey (stored in git-ignored .secrets/); 29,558 VE hotspots, 30-day window, VIIRS S-NPP+NOAA-20. Script scripts/method0002_validate.py; outputs data/derived/method-0002/ + manifest (checksums).
+- Honest result: site-level detection FAILS pre-registered 80% (36.4% r1.5 / 66.2% r5.0); validated as cluster-density (SB 1,046/30d) and facility-differential (Amuay 284/27d, José 122/27d, El Palito 36/18d vs Bajo Grande 0) indicator; controls 0%. Deviations documented (radius, per-facility AOIs, event-test substitution).
+- Derived observations added to AST-0001/0002/0004/0012/0014. Traps: FIRMS API path is /api/area/csv/ (not area_csv); DAY_RANGE max 5; chunk joins need explicit newlines.
+- Open: OGIM↔FIRMS coordinate/method mismatch [GAP]; remaining methods pending. Next: METHOD-0001/0004 or MVP packaging on user pick.

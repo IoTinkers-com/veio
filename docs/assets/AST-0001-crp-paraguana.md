@@ -24,7 +24,7 @@
 | 2026-07 | Reuters via PGJ Online | Complex at fraction of capacity; no major repairs in 2026; contractor operations reduced; ≥$20B full-restoration estimate (experts) | Moderate |
 
 ## Change indicators
-- None yet — requires geo-method derived products (v0.2).
+- **Derived** (METHOD-0002 v0.3.0, manifest `data/derived/method-0002/manifest.json`): thermal hotspot detections observed within 5 km of the Amuay OGIM point on 27 of 30 days (284 detections, 2026-09-04..10-03) — compatible with active flaring; no detections within 5 km of the Cardón OGIM point [GAP: flare-stack locations vs facility centroid]. Confidence Moderate (method validated as differential indicator, not site-level). Remaining methods (optical/SAR/lights): pending.
 
 ## Environmental observations
 - Open waste pits near full and residue seeps reported by workers/residents (Reuters via PGJ Online, 2026-07) — **Source-recorded**; no independent verification; no cause claims.

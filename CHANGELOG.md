@@ -4,6 +4,10 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — METHOD-0002 validation run (2026-10-04)
+- First executed geo-method: FIRMS hotspot time series (`scripts/method0002_validate.py`, outputs `data/derived/method-0002/` with manifest). Validation history v0.1.0→v0.3.0 recorded: site-level detection FAILS (36–66% < 80%); validated as cluster-density and facility-differential indicator (controls clean; Amuay 284/30d vs Bajo Grande 0/0).
+- Derived observations added to dossiers AST-0001, 0002, 0004, 0012, 0014 with manifest references; METHOD-0002 note updated with results, verdict and documented deviations.
+
 ### Added — Asset Dossier v0.1, batch 1 (2026-10-04)
 - Feature brief `docs/briefs/FEATURE-asset-dossier-v0.1.md` (17 assets, validated shortlist).
 - Asset registry `registry/assets.csv` (AST-0001..0004) and dossiers for the 4 refineries: CRP Paraguaná, El Palito, Morón, Bajo Grande — every claim dated and cited; observation/interpretation separated; OGIM coordinate discrepancies flagged.

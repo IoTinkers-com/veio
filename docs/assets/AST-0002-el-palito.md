@@ -23,7 +23,7 @@
 | 2024-07 | EN Wikipedia (acc. 2026-10-04) | Iranian catalysts in use in cracking unit (NIORDC CEO) | Moderate |
 
 ## Change indicators
-- None yet — requires geo-method derived products (v0.2).
+- **Derived** (METHOD-0002 v0.3.0, manifest `data/derived/method-0002/manifest.json`): thermal hotspot detections observed within 5 km on 18 of 30 days (36 detections, 2026-09-04..10-03) — compatible with intermittent flaring; co-located with OGIM "LECHOSO" detection (DS-0012). Confidence Moderate. Remaining methods: pending.
 
 ## Environmental observations
 - Coastal oil spill late December 2023 reported (EN Wikipedia) — **Source-recorded**; no independent verification; no cause claims beyond source attribution.

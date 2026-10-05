@@ -22,7 +22,7 @@
 | 2026-09-14 | DS-0012 OGIM | Flaring detection "ENSANADA" at 10.495, -71.652, ~13 km south of OGIM site point | Moderate (dataset, method unpublished [GAP]) |
 
 ## Change indicators
-- None yet — requires geo-method derived products (v0.2).
+- **Derived** (METHOD-0002 v0.3.0, manifest `data/derived/method-0002/manifest.json`): no thermal hotspot detections within 5 km over 30 days (2026-09-04..10-03) — compatible with the reported out-of-service status; absence is not proof of inactivity (method not validated for site-level absence). Confidence Moderate. Remaining methods: pending.
 
 ## Environmental observations
 - None recorded in current sources.

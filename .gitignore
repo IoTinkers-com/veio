@@ -5,6 +5,7 @@ data/
 # Secrets and environment
 .env
 .env.*
+.secrets/
 !.env.example
 
 # OS / IDE

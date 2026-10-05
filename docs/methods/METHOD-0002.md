@@ -16,4 +16,16 @@
 - AOI radius (≥1 pixel = ~375 m); confidence filter (nominal/high); day/night; persistence definition (≥N detections in M days).
 
 ## Status
-- Not executed. No derived product exists yet.
+- Executed 2026-10-04 (v0.1.0 → v0.3.0; script `scripts/method0002_validate.py`; outputs `data/derived/method-0002/`, manifest with checksums).
+
+## Validation results (2026-10-04, window 2026-09-04..10-03, VIIRS S-NPP + NOAA-20 NRT, 29,558 hotspots in VE bbox)
+| Test | Criterion | r=1.5 km | r=5.0 km | Result |
+|---|---|---|---|---|
+| Site detection | ≥80% of 77 OGIM sites | 36.4% | 66.2% | **FAIL both** |
+| Density (Santa Bárbara) | signal present | 286 | 1,046 | pass |
+| Differential | active >> inactive | all 0 (AOI artifact) | Amuay 284/27d · José 122/27d · El Palito 36/18d vs Bajo Grande 0/0 | pass |
+| Controls | <10% days | 0% | 0% | pass |
+
+- **Verdict:** NOT validated for site-level detection or absence claims. Validated as **cluster-density and facility-differential indicator** (controls clean; active/inactive discrimination works at 5 km with per-facility AOIs).
+- Deviations from pre-registration (documented in manifest): radius 1.5→5 km after diagnostic; midpoint AOI → per-facility AOIs (scripting bug); 2024-09-17 CRP event test substituted by differential test (NRT API covers ≤1 year).
+- Interpretation for OGIM mismatch: OGIM detections (2026-09-14 snapshot) vs FIRMS 30-day window differ in method and epoch; coordinate precision of OGIM points unquantified [GAP].
