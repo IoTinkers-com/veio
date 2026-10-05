@@ -70,3 +70,8 @@
 ## 2026-10-04 — devin (GLM) — MVP packaging + first push
 - README EN/ES updated: repo map (assets/briefs/methods/reviews/scripts) + status (15 datasets, 17 dossiers, 4 methods). Pushed 89aad88..d9c3bc8 to IoTinkers-com/veio. Branch protection ON: required checks CI/secrets+CI/docs, no force-push, admins bypass.
 - Open: METHOD-0001/0004 v0.2 redesigns; AOI coords; bilingual pass of dossiers; Temblador swap. Next: user pick.
+
+## 2026-10-04 — devin (GLM) — v0.2 redesigns executed (both NOT validated) + AST-0014 correction
+- Pre-registered 0001/0004 v0.2 in 93b9b25 before running. 0001: dNBR = seasonal drying (C2 fail); water detector hits algal blooms (77 non-specific). 0004: CRP halt z=-0.12 (2/5 event days valid); Maracaibo Aug-Oct +40% < 1.5x. Author error: 0001 used adjacent, not same-season, windows.
+- Corrections: AST-0014 AOI was an OGIM offshore point 29 km away (José = 750 hotspots/30d, not 122/27d); v0.1 "Maracaibo ~x2" withdrawn (seasonal artefact). Figures in docs/methods/figures/.
+- Open: v0.3 rules (same-month windows, bloom gate or SAR for platforms, availability check before event tests). Validated so far: METHOD-0002 differential/density only.

@@ -9,6 +9,7 @@
 ## Location
 - Complex centroid: 10.069, -64.864 (OpenStreetMap way 265071557 via mapcarta; concordant place record, accessed 2026-10-04), between Barcelona and Puerto Píritu, Anzoátegui (es Wikipedia)
 - OGIM offshore terminal records -64.646/10.216 and -64.494/10.194 (DS-0012, 2017) are loading points ~29 km NE — **not** the complex. Correction 2026-10-04: earlier versions of this dossier used -64.646/10.216 as the asset point.
+- Visual check (Derived, METHOD-0001 v0.2 composites, Sentinel-2 Oct 2025–Jan 2026): tank farms, process areas and jetties present at the corrected centroid — location consistent. See `docs/methods/figures/METHOD-0001-v0.2-T2.png`.
 
 ## Infrastructure
 - 740 ha complex; hosts upgraders (Petrocedeño, ex-PetroAnzoátegui/San Félix, Petromonagas — see AST-0005/0007) and Pequiven mixed plants (es Wikipedia, accessed 2026-10-04)

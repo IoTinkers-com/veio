@@ -48,3 +48,20 @@ Design changes: per-pixel medians on a common EPSG:4326 grid (WarpedVRT; no stre
 - Expected false positives: moored vessels (removed by median unless persistent), lemna blooms (diffuse — excluded by ≤200 px size cap), cloud residue, industrial surfaces with low NBR contrast (T2 may fail for physical reasons — a fire on concrete/steel has weak dNBR).
 - Visual outputs (per test AOI): RGB pre/post GeoTIFFs, change-index GeoTIFF, candidates GeoJSON, PNG quicklook.
 - Method validated for dossier use only if T1 **or** T2 passes **and** both controls pass; the passing detector alone is validated.
+
+## v0.2 results (2026-10-04; script `scripts/method0001_v02.py`; outputs `data/derived/method-0001/v0.2/` + manifest; 8+8 scenes per test)
+| Test | Result | Pass? |
+|---|---|---|
+| T1 Alula (NIR over water) | 77 compact components; they cluster on green bloom patches visible in the post composite over the Lagunillas Lago field | Letter-pass, **not specific** — platform not isolable |
+| C1 open sea | 0 components, 0% pixels | pass |
+| T2 Petrocedeño fire (dNBR) | 51% of land pixels over threshold; signal covers all vegetation, industrial area neutral | **FAIL** — seasonal drying, not fire |
+| C2 Valencia urban | 3.6% pixels over threshold (criterion <0.5%) | **FAIL** |
+
+![T1](figures/METHOD-0001-v0.2-T1.png)
+![T2](figures/METHOD-0001-v0.2-T2.png)
+*Contains modified Copernicus Sentinel data 2025–2026 (processed by VEIO).*
+
+- **Verdict: NOT validated** (pre-registered rule: C2 failed). No Derived observations added to dossiers.
+- Root cause (author error): v0.2 used **adjacent** pre/post windows, violating the redesign requirement of same-season interannual pairs written above; Oct–Nov → Dec–Jan spans dry-season onset, which drives dNBR everywhere. T1 detector has no bloom rejection.
+- By-product (visual check, not a method result): the corrected José complex centroid (AST-0014) falls on tank farms and jetties in both composites — location confirmed.
+- **v0.3 requirements:** interannual same-month windows only; floating-algae index gate for water detectors (or move platform detection to SAR, METHOD-0003); decouple detector validation (each detector judged with its own control).

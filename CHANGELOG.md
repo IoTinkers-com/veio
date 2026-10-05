@@ -4,6 +4,13 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Changed — METHOD-0001/0004 v0.2 runs + corrections (2026-10-04)
+- v0.2 designs pre-registered in commit `93b9b25` before execution; both executed with visual outputs (RGB composites, change maps, daily/monthly series) and figures committed under `docs/methods/figures/`.
+- METHOD-0001 v0.2: NOT validated (dNBR confounded by seasonal drying; water detector non-specific vs algal blooms; land control failed). Root cause: adjacent instead of same-season windows (author error, documented).
+- METHOD-0004 v0.2: NOT validated (daily event test underpowered, z = −0.12; Maracaibo same-month trend +40% below pre-registered 1.5×).
+- **Correction:** the v0.1 "Maracaibo lights ~doubled" candidate was a seasonal-comparison artefact — withdrawn.
+- **Correction:** AST-0014 José complex AOI moved ~29 km from an OGIM offshore terminal point to the OSM complex centroid; METHOD-0002 figure for José corrected to 750 detections / 30 days (was 122 / 27, wrong location). Location visually confirmed in Sentinel-2 composites.
+
 ### Added — METHOD-0004 validation run (2026-10-04)
 - Nighttime-lights pipeline (`scripts/method0004_validate.py`, VNP46A3 monthly via LAADS/CMR; outputs `data/derived/method-0004/` with manifest). Validation verdict: NOT validated (1/4 directional tests; controls unstable; monthly granularity can't see 5-day events; AOI coordinate quality decisive). Redesign pre-registered (daily VNP46A2, verified AOIs, flare masking). Candidate observation flagged: Maracaibo lights ~doubled 2023→2025.
 

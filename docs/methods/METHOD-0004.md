@@ -28,7 +28,7 @@
 | Controls ±5% | stable | Valencia ±15%; Maracaibo +95% (78→153); Copey +100% | **FAIL** |
 
 - **Verdict: NOT validated (1/4 directional, controls unstable).** No Derived observations added to dossiers.
-- Findings: (1) monthly granularity cannot see 5-day events; (2) ramps appear with lag across quarters; (3) AOI coordinate quality is decisive — guessed coords produce dead extractions; (4) flares dominate asset AOIs (CRP 20–35 nW) — must mask jointly with METHOD-0002; (5) Maracaibo lights nearly doubled 2023→2025 — itself a candidate observation for the Atlas (city reactivation), pending validation.
+- Findings: (1) monthly granularity cannot see 5-day events; (2) ramps appear with lag across quarters; (3) AOI coordinate quality is decisive — guessed coords produce dead extractions; (4) flares dominate asset AOIs (CRP 20–35 nW) — must mask jointly with METHOD-0002; (5) ~~Maracaibo lights nearly doubled 2023→2025 — candidate observation~~ **Superseded by v0.2:** seasonal-mismatch artefact (compared different months); same-month change is +40%, not validated.
 - **Redesign (pre-registered for v0.2):** daily VNP46A2 for short events; AOI coords resolved from dossier validation first; flare masking via METHOD-0002 outputs; control criterion = trend match, not ±5%.
 
 ## v0.2 pre-registration (2026-10-04, committed before execution)
@@ -43,3 +43,21 @@ Design changes: daily VNP46A2 (`Gap_Filled_DNB_BRDF-Corrected_NTL`, Mandatory_Qu
 
 - Dropped from v0.1 (carried to v0.3 backlog, not hidden): Lagunillas rise (AOI unverifiable until METHOD-0001 T1 locates the platform), El Palito monthly peak (flare-dominated AOI).
 - Method validated for dossier use per test: a passing test validates only that use case.
+
+## v0.2 results (2026-10-04; script `scripts/method0004_v02.py`; outputs `data/derived/method-0004/v0.2/` + manifest)
+| Test | Result | Pass? |
+|---|---|---|
+| T1 CRP halt (daily, flare-masked) | baseline 23.8 ± 9.1 (n=8), event 22.7 (n=2) → z = −0.12 (−0.66 excluding a 1-pixel day) | **FAIL** — no detectable departure; underpowered (2/5 event days valid; 09-17/18 missing); flare mask removed 0 pixels (119 SP hotspots in ±0.05° box, none within 1 km of AOI pixels) |
+| T2 Maracaibo trend (Aug–Oct) | Maracaibo 106.7 → 134.7 → 149.8 (2025/2023 = 1.40); Valencia 100.2 → 100.2 → 103.6 (1.03) | **FAIL** (pre-registered ≥1.5) |
+| C1 Canaima | daily: 2 valid baseline days → not evaluable; monthly < 1 nW all months | partial |
+| Context Valencia daily | z = −0.37; day-to-day range 58–142 nW | — |
+
+![T1 daily](figures/METHOD-0004-v0.2-T1.png)
+![T2 trend](figures/METHOD-0004-v0.2-T2.png)
+![NTL change west](figures/METHOD-0004-v0.2-change-west.png)
+*NASA Black Marble VNP46A2/A3 v002 (doi:10.5067/VIIRS/VNP46A2.002, VNP46A3.002); processed by VEIO.*
+
+- **Verdict: NOT validated.** No Derived observations added to dossiers.
+- **Correction to v0.1:** the "Maracaibo ~×2" candidate was a seasonal-mismatch artefact (May–Jul 2023 vs Aug–Oct 2025). Same-month figure: +40% vs Valencia +3% — descriptive statistic only, below the pre-registered threshold; not an observation.
+- Findings: daily DNB at 5×5 px is too noisy for 5-day events (Valencia ±40% day-to-day); cloud/QF gaps remove most event days in September.
+- **v0.3 requirements:** event tests only where ≥4 of 5 event days are valid (check availability before registering); larger AOIs or multi-pixel robust statistics; flare masking from VNP46 thermal/brightness outliers rather than a fixed 1 km radius.
