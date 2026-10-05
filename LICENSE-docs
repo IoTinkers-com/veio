@@ -1,0 +1,13 @@
+Documentation, methodology, metadata and other non-code content of this repository
+is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this material for any purpose, provided you give
+attribution (link to this repository and indicate changes), and do not imply the
+licensors endorse you or your use.
+
+Note: datasets referenced or ingested by VEIO keep their own licenses — always
+consult the dataset card (docs/datasets/) and the attribution displayed on the map.
+Code is licensed separately under Apache-2.0 (see LICENSE).

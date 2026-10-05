@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# VEIO pre-commit: secret scan + skill frontmatter check.
+# Enable once per clone:  git config core.hooksPath .githooks
+set -euo pipefail
+
+fail=0
+
+# 1) Secret scan (gitleaks if installed)
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks protect --staged --redact || fail=1
+else
+  echo "note: gitleaks not installed; skipping secret scan (CI still runs it)"
+fi
+
+# 2) Skill frontmatter: name must match directory (Agent Skills standard)
+while IFS= read -r f; do
+  dir=$(basename "$(dirname "$f")")
+  name=$(sed -n 's/^name:[[:space:]]*//p' "$f" | head -n1)
+  if [ "$name" != "$dir" ]; then
+    echo "ERROR: $f name '$name' != directory '$dir'"
+    fail=1
+  fi
+done < <(find .claude/skills -name SKILL.md 2>/dev/null)
+
+exit $fail

@@ -1,0 +1,26 @@
+# Data — never commit raw/normalized/derived datasets (object storage instead)
+data/
+!data/.gitkeep
+
+# Secrets and environment
+.env
+.env.*
+!.env.example
+
+# OS / IDE
+Thumbs.db
+.DS_Store
+~$*
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+
+# Local tooling
+tmp/

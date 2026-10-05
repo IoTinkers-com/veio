@@ -1,0 +1,1 @@
+﻿{"ignorePatterns": [{"pattern": "^https://urs.earthdata.nasa.gov"}, {"pattern": "^https://data.nasa.gov"}, {"pattern": "\\.(tif|nc|gpkg|zip|csv)$"}], "replacementPatterns": [], "httpHeaders": [], "timeout": "10s", "retryOn429": true, "retryCount": 2}
