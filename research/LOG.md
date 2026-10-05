@@ -45,3 +45,8 @@
 - Zero blockers; 2 corrections applied: AST-0011 "persistent"→same-day detections; AST-0012 count 43→33 (verified vs extract; largest name-cluster confirmed). Record: docs/reviews/2026-10-04-dossiers-batches-2-4.md.
 - Dossier v0.1 complete: 17/17 assets, all claims dated+cited, interpretations separated, ethics/licensing pass.
 - Open: Temblador swap decision; Dragon license re-verify <90 d; imagery validation of flagged coords; bilingual .es.md pass before Atlas. Next: geo-method briefs for change indicators (v0.2) or MVP packaging.
+
+## 2026-10-04 — devin (GLM) — Change-indicator brief + 4 method notes (v0.2, not executed)
+- Brief: docs/briefs/FEATURE-change-indicators-v0.2.md. Method notes METHOD-0001..0004 (optical disturbance, FIRMS hotspots, SAR, Black Marble lights) — hypothesis + validation plan pre-registered, acceptance criteria set, negative results to be recorded.
+- Implementation order agreed in brief: 002 FIRMS (cheapest) → 001 optical → 004 lights → 003 SAR. Nothing executed yet; no derived products exist.
+- Open: METHOD-#### prefix not in §12 conventions (added de facto); validation reference events are press-based (confidence cap Moderate). Next: execute METHOD-0002 validation or MVP packaging on user pick.
