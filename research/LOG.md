@@ -14,3 +14,8 @@
 - Registered DS-0012..0015 from leads surfaced in a separate private research workspace (public third-party datasets only; no external client/partner context imported): OGIM v3.0 (CC BY, score 5), TROPOMI CH4 (4), EMIT CH4 plumes (3; V001 decommissioned 2026-03-26 → V2), EDGAR_2025_GHG (2).
 - Licenses verified from provider pages 2026-10-04; §13 respected — cards cite providers only.
 - Open: OGIM update cadence [UNVERIFIED]; EMIT V2 record start [GAP]. Next: asset shortlist for dossiers.
+
+## 2026-10-04 — devin (GLM) — Asset shortlist v0.1 (proposal)
+- Drafted 17 candidates (AST-0001..0017): 4 refineries, 4 Faja upgraders, 5 conventional fields, 3 midstream/export, 1 offshore group. Criteria: segment/geographic coverage, public identity, observation potential.
+- Source: OGIM v3.0 VE extract (DS-0012) copied to data/ogim_venezuela/ (git-ignored); flaring detections 2026-09-14.
+- Open: JV upgrader + offshore identity↔coords validation [GAP]. Gate: user validates shortlist → feature brief → dossiers.
