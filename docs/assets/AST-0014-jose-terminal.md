@@ -7,7 +7,8 @@
 - Status as recorded by sources: February 2025 closed with 20.5M bbl for export; March target 21M (Prensa Presidencial, 2025-03-28)
 
 ## Location
-- Barcelona/Puerto Píritu, Anzoátegui (es Wikipedia); OGIM terminal records: -64.646/10.216 and -64.494/10.194 (DS-0012, SRC_DATE 2017-01-01)
+- Complex centroid: 10.069, -64.864 (OpenStreetMap way 265071557 via mapcarta; concordant place record, accessed 2026-10-04), between Barcelona and Puerto Píritu, Anzoátegui (es Wikipedia)
+- OGIM offshore terminal records -64.646/10.216 and -64.494/10.194 (DS-0012, 2017) are loading points ~29 km NE — **not** the complex. Correction 2026-10-04: earlier versions of this dossier used -64.646/10.216 as the asset point.
 
 ## Infrastructure
 - 740 ha complex; hosts upgraders (Petrocedeño, ex-PetroAnzoátegui/San Félix, Petromonagas — see AST-0005/0007) and Pequiven mixed plants (es Wikipedia, accessed 2026-10-04)
@@ -22,13 +23,13 @@
 | [Dec, year UNVERIFIED] | Venezuela Política | TAECJAA loading Merey 16/18 mainly to Asia (Singapore, Malaysia, China); waiting vessels and STS transfers reported | Low (single outlet, unnamed report) |
 
 ## Change indicators
-- **Derived** (METHOD-0002 v0.3.0, manifest `data/derived/method-0002/manifest.json`): thermal hotspot detections observed within 5 km on 27 of 30 days (122 detections, 2026-09-04..10-03) — compatible with continuous industrial thermal sources (upgraders/flares). Confidence Moderate. Remaining methods: pending.
+- **Derived** (METHOD-0002 v0.3.0, recomputed at corrected centroid with `scripts/check_jose_aoi.py` on the same cached inputs): thermal hotspot detections observed within 5 km on 30 of 30 days (750 detections; 311 within 1.5 km, 2026-09-04..10-03) — compatible with continuous industrial thermal sources (upgraders/flares). Confidence Moderate. Correction 2026-10-04: the earlier figure (122 detections / 27 days) referred to the offshore terminal point ~29 km NE, not the complex. Remaining methods: pending.
 
 ## Environmental observations
 - None recorded in current sources for the terminal itself.
 
 ## Methane / flaring association
-- Hosts upgraders and petrochemical plants — potential CH4 sources [GAP: no asset-level measurement]; no OGIM flaring detections within 15 km of terminal records (DS-0012, 2026-09-14).
+- Hosts upgraders and petrochemical plants — potential CH4 sources [GAP: no asset-level measurement]; no OGIM flaring detections within 15 km of the corrected centroid (DS-0012, 2026-09-14) despite dense FIRMS thermal detections — OGIM flaring layer appears upstream-oriented [GAP: OGIM detection scope].
 
 ## Interpretation (separate)
 - **Interpretation:** Rising monthly export figures reported by official sources are consistent with terminal rehabilitation claims; independent vessel-data verification recommended. Never merge with observations.

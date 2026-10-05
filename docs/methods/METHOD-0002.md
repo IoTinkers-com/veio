@@ -23,7 +23,9 @@
 |---|---|---|---|---|
 | Site detection | ≥80% of 77 OGIM sites | 36.4% | 66.2% | **FAIL both** |
 | Density (Santa Bárbara) | signal present | 286 | 1,046 | pass |
-| Differential | active >> inactive | all 0 (AOI artifact) | Amuay 284/27d · José 122/27d · El Palito 36/18d vs Bajo Grande 0/0 | pass |
+| Differential | active >> inactive | all 0 (AOI artifact) | Amuay 284/27d · José 750/30d* · El Palito 36/18d vs Bajo Grande 0/0 | pass |
+
+*Correction 2026-10-04: José AOI in v0.3.0 used an OGIM offshore terminal point ~29 km from the complex (122/27d). Recomputed at the OSM complex centroid (-64.864, 10.069) on the same cached inputs: 750 detections / 30 days at 5 km. Verdict unchanged (strengthened).
 | Controls | <10% days | 0% | 0% | pass |
 
 - **Verdict:** NOT validated for site-level detection or absence claims. Validated as **cluster-density and facility-differential indicator** (controls clean; active/inactive discrimination works at 5 km with per-facility AOIs).
