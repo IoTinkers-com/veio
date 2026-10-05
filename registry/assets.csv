@@ -7,3 +7,8 @@ id,name,type,state,lon,lat,location_source,status,note_path
 "AST-0006","PetroSinovensa","blending-plant","Anzoategui","","","DS-0012 (Jose complex vicinity); exact coords [GAP]","sustained operations per sources; outages 2023","docs/assets/AST-0006-sinovensa.md"
 "AST-0007","Petrocedeno (ex-Sincor)","upgrader","Anzoategui","","","DS-0012 (Jose complex vicinity); exact coords [GAP]","operating per company statement after 2025-11 fire","docs/assets/AST-0007-petrocedeno.md"
 "AST-0008","Petropiar (Hamaca)","upgrader","Anzoategui","","","DS-0012 (Jose complex vicinity); exact coords [GAP]","operating per sources; Chevron license wind-down 2025-03","docs/assets/AST-0008-petropiar.md"
+"AST-0009","Lagunillas (Costa Oriental del Lago)","field-cluster-lake","Zulia","","","DS-0012 (1010 Zulia wells, 2021); Alula at Lagunillas per Reuters 2025-09","reactivation by CCRC reported 2025","docs/assets/AST-0009-lagunillas.md"
+"AST-0010","Quiriquire (Petroquiriquire)","field-conventional","Monagas","","","DS-0012 (Monagas wells); field coords [GAP]","JV operating; Repsol production rising 2025","docs/assets/AST-0010-quiriquire.md"
+"AST-0011","Jusepin","field-gas-plant","Monagas","-63.475237","9.735675","DS-0012 (flaring detections 2026-09-14)","gas plant operating; field legacy","docs/assets/AST-0011-jusepin.md"
+"AST-0012","Santa Barbara / Santa Barbara Sur","field-conventional","Monagas","-63.662301","9.622276","DS-0012 (43 flaring detections 2026-09-14)","operating per sources; diluent role","docs/assets/AST-0012-santa-barbara.md"
+"AST-0013","Boqueron","field-conventional","Monagas","-63.268084","9.775844","DS-0012 (flaring detection 2026-09-14)","operating per gem.wiki","docs/assets/AST-0013-boqueron.md"

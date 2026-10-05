@@ -30,3 +30,8 @@
 - Shortlist corrected (v0.1.1): Sincor = Petrocedeño (not Petroanzoátegui = Petro San Félix); all four upgraders at José complex, Anzoátegui.
 - Dossiers AST-0005..0008 written: San Félix (off line ~2019, areas → Petro Roraima 2024), Sinovensa (blending 165k b/d, steadiest), Petrocedeño (fires 2025-11-19 Reuters), Petropiar (Chevron license wind-down 2025-03, scenarios 105-138k bpd).
 - Open: Argus article dates [UNVERIFIED]; exact upgrader coords [GAP]; scientific-review batch 2. Next: batch 3 (conventional fields) on user go.
+
+## 2026-10-04 — devin (GLM) — Dossier batch 3 (conventional fields)
+- Dossiers AST-0009..0013: Lagunillas (CCRC/Alula reactivation, 12k→60k bpd target 2026), Quiriquire (Petroquiriquire JV, Repsol 71.3k boe/d 2025), Jusepín (gas plant + Jusepin 200; legacy field), Santa Bárbara (43 flaring detections — densest cluster; Merey diluent role), Boquerón (operating; Roszarubezhneft stake flagged for counsel).
+- Registry assets.csv now AST-0001..0013 (13/17).
+- Open: scientific-review batch 2+3; coords for Lagunillas/Quiriquire [GAP]. Next: batch 4 (midstream AST-0014..0016 + offshore AST-0017) on user go.
