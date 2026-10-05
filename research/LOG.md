@@ -61,3 +61,8 @@
 - S2 L2A via Planetary Computer; pipeline works end-to-end (composites, NDVI/NDBI change, controls) after fixing PROJ conflict, CRS transform, out_shape and L2A offset (memory note added).
 - Verdict: INCONCLUSIVE/FAILED as designed — FCC restart not optically visible; ocean controls; seasonal confounder. Redesign pre-registered in METHOD-0001 (same-season pairs, land controls, surface-expression events). No dossier observations added.
 - Open: METHOD-0001 v0.2 redesign; METHOD-0004 pending. Next: user pick (redesign, METHOD-0004, MVP packaging).
+
+## 2026-10-04 — devin (GLM) — METHOD-0004 executed (not validated, documented)
+- VNP46A3 monthly via LAADS/CMR (user EDL token in .secrets/); 27 tiles, 9 months, 8 AOIs. Tile convention trap fixed via file attrs (h00 exists; v07=10..20N) — memory note added.
+- Verdict: NOT validated (1/4 directional; controls unstable; monthly can't see 5-day events; Lagunillas AOI coords dead [GAP]). Candidate observation: Maracaibo lights ~x2 2023→2025 (pending validation). Redesign pre-registered.
+- Open: METHOD-0001 v0.2 + METHOD-0004 v0.2 redesigns; AOI coords validation. Next: MVP packaging or redesigns on user pick.

@@ -4,6 +4,9 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — METHOD-0004 validation run (2026-10-04)
+- Nighttime-lights pipeline (`scripts/method0004_validate.py`, VNP46A3 monthly via LAADS/CMR; outputs `data/derived/method-0004/` with manifest). Validation verdict: NOT validated (1/4 directional tests; controls unstable; monthly granularity can't see 5-day events; AOI coordinate quality decisive). Redesign pre-registered (daily VNP46A2, verified AOIs, flare masking). Candidate observation flagged: Maracaibo lights ~doubled 2023→2025.
+
 ### Added — METHOD-0001 pilot run (2026-10-04)
 - Optical disturbance pipeline (`scripts/method0001_validate.py`, Sentinel-2 L2A via Planetary Computer; outputs `data/derived/method-0001/` with manifest). Validation verdict: INCONCLUSIVE/FAILED as designed — reference events lack surface expression at 10–20 m, ocean-dominated controls, seasonal confounder. Redesign requirements pre-registered (same-season pairs, land controls, surface-expression events). No Derived observations added to dossiers.
 
