@@ -1,0 +1,5 @@
+id,name,type,state,lon,lat,location_source,status,note_path
+"AST-0001","Centro de Refinación Paraguaná (Amuay–Cardón)","refinery-complex","Falcón","-70.171000","11.773000","DS-0012 (OGIM, 2017-01-01)","active-partial per sources","docs/assets/AST-0001-crp-paraguana.md"
+"AST-0002","Refinería El Palito","refinery","Carabobo","-68.136000","10.452000","DS-0012 (OGIM, 2017-01-01)","active-partial per sources","docs/assets/AST-0002-el-palito.md"
+"AST-0003","Complejo Industrial Morón","refinery-petrochemical","Carabobo","-68.199003","10.522330","gem.wiki (accessed 2026-10-04); OGIM coord discrepancy flagged","active-partial per sources","docs/assets/AST-0003-moron.md"
+"AST-0004","Refinería Bajo Grande","refinery","Zulia","-71.714000","10.609000","DS-0012 (OGIM, 2017-01-01); coord discrepancy flagged","out-of-service since 2018-11 per sources; restart attempts reported","docs/assets/AST-0004-bajo-grande.md"

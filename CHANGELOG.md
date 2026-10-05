@@ -4,6 +4,10 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — Asset Dossier v0.1, batch 1 (2026-10-04)
+- Feature brief `docs/briefs/FEATURE-asset-dossier-v0.1.md` (17 assets, validated shortlist).
+- Asset registry `registry/assets.csv` (AST-0001..0004) and dossiers for the 4 refineries: CRP Paraguaná, El Palito, Morón, Bajo Grande — every claim dated and cited; observation/interpretation separated; OGIM coordinate discrepancies flagged.
+
 ### Added — Phase B Discovery (2026-10-04)
 - 11 verified dataset cards (`docs/datasets/DS-0001`–`DS-0011`): Sentinel-2, Sentinel-1, Landsat 8/9, NASA FIRMS, NASA Black Marble, World Bank Global Gas Flaring Database, VIIRS Nightfire (DISPLAY ONLY / RESTRICTED), GEM Global Oil Infrastructure Tracker, SkyTruth Cerulean, OCHA HDX Venezuela COD-AB, OpenStreetMap.
 - 4 more cards from leads surfaced in a separate private research workspace (public third-party datasets only): OGIM v3.0 infrastructure database (`DS-0012`), TROPOMI CH4 (`DS-0013`), EMIT CH4 plumes (`DS-0014`), EDGAR_2025_GHG gridmaps (`DS-0015`).

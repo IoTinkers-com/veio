@@ -19,3 +19,8 @@
 - Drafted 17 candidates (AST-0001..0017): 4 refineries, 4 Faja upgraders, 5 conventional fields, 3 midstream/export, 1 offshore group. Criteria: segment/geographic coverage, public identity, observation potential.
 - Source: OGIM v3.0 VE extract (DS-0012) copied to data/ogim_venezuela/ (git-ignored); flaring detections 2026-09-14.
 - Open: JV upgrader + offshore identity↔coords validation [GAP]. Gate: user validates shortlist → feature brief → dossiers.
+
+## 2026-10-04 — devin (GLM) — Feature brief + dossier batch 1 (refineries)
+- Shortlist validated by user. Brief: docs/briefs/FEATURE-asset-dossier-v0.1.md. Registry assets.csv created (AST-0001..0004).
+- Dossiers AST-0001..0004 (CRP Paraguaná, El Palito, Morón, Bajo Grande) with dated sources (Reuters 2025-05/2026-07, Wikipedia, Notitarde 2026-04); OGIM flaring associations (LECHOSO, ENSANADA 2026-09-14); coord discrepancies flagged [GAP].
+- Open: scientific-review gate for batch 1; Morón/Bajo Grande coords need imagery validation. Next: batch 2 (Faja upgraders) on user go.
