@@ -65,3 +65,16 @@ Design changes: per-pixel medians on a common EPSG:4326 grid (WarpedVRT; no stre
 - Root cause (author error): v0.2 used **adjacent** pre/post windows, violating the redesign requirement of same-season interannual pairs written above; Oct–Nov → Dec–Jan spans dry-season onset, which drives dNBR everywhere. T1 detector has no bloom rejection.
 - By-product (visual check, not a method result): the corrected José complex centroid (AST-0014) falls on tank farms and jetties in both composites — location confirmed.
 - **v0.3 requirements:** interannual same-month windows only; floating-algae index gate for water detectors (or move platform detection to SAR, METHOD-0003); decouple detector validation (each detector judged with its own control).
+
+## v0.3 pre-registration (2026-10-04, committed before execution)
+Scope change: land detector only (dNBR interannual same-season). The Alula platform test moves to METHOD-0003 (SAR) — optical cannot separate it from algal blooms (v0.2 finding). New: a true-negative test on a real asset.
+
+| Test | AOI (box) | Windows (pre / post) | Pass criterion |
+|---|---|---|---|
+| T-fire: Petrocedeño fire 2025-11-19 (Reuters) | José complex, centre 10.069/-64.864, ±0.05° | 2024-12-01..2025-01-31 / 2025-12-01..2026-01-31 (same months, 1 yr apart) | ≥1 component ≥4 px with dNBR ≥ 0.27 on land pixels |
+| C-urban: Valencia | centre 10.18/-68.00, ±0.05° | same windows | ≤1 component and <0.5% pixels over threshold |
+| T-neg: Bajo Grande (inactive since 2018-11 per Reuters; storage-only activity possible) | centre -71.714/10.609, ±0.05° | same windows | <0.5% pixels over threshold |
+
+- Rationale: both windows sit in the dry season → seasonal drying cancels in the interannual difference; the fire scar (if persistent) appears only in post.
+- Known risk: fire on industrial surfaces may not produce dNBR ≥ 0.27 (v0.2 finding) — a fail here is recorded as "no detectable burn scar at 20 m", not hidden.
+- Method validated for land-change use only if ALL THREE pass.
