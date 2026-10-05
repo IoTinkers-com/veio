@@ -35,3 +35,8 @@
 - Dossiers AST-0009..0013: Lagunillas (CCRC/Alula reactivation, 12k→60k bpd target 2026), Quiriquire (Petroquiriquire JV, Repsol 71.3k boe/d 2025), Jusepín (gas plant + Jusepin 200; legacy field), Santa Bárbara (43 flaring detections — densest cluster; Merey diluent role), Boquerón (operating; Roszarubezhneft stake flagged for counsel).
 - Registry assets.csv now AST-0001..0013 (13/17).
 - Open: scientific-review batch 2+3; coords for Lagunillas/Quiriquire [GAP]. Next: batch 4 (midstream AST-0014..0016 + offshore AST-0017) on user go.
+
+## 2026-10-04 — devin (GLM) — Dossier batch 4 (midstream + offshore) — all batches done
+- AST-0014 José/TAECJAA (20.5M bbl Feb 2025 official; Petropars tank rehab), AST-0015 La Salina (Blend 22, tanker queue Apr 2025, hull-staining leaks), AST-0016 Temblador tank yard (evidence thin [GAP]; candidate for swap), AST-0017 offshore (Dragon: license 2023→revoked 2025→re-authorized [UNVERIFIED]; 4/5 platforms unidentified).
+- Registry assets.csv complete: AST-0001..0017 (17/17).
+- Open: scientific-review batches 2–4; Temblador candidate swap decision; Dragon license re-verify <90 d. Next: reviews.
