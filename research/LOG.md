@@ -86,3 +86,9 @@
 - Result: 1 new persistent object at Lagunillas 10.13715/−71.2703, first bright 2025-09-01, persistent to 2025-12-30, peak +20 dB; confirmed in ascending track 4; both open-lake controls 0 → VALIDATED for "new persistent bright object"; NOT for identity or open-water detection (eastern-lake ~55 m screening found none).
 - Derived observation added to AST-0009 (compatible with reported Alula jack-up, Reuters 2025-09-04; identity undetermined). Figure + manifest in repo. Discovery used to pin params (documented); scratch scripts removed.
 - Open: v0.2 (terminal vessel-presence with independent ground truth; port clutter mask; SLC/coherence). Validated so far: METHOD-0002 (differential/density), METHOD-0003 (bright-object, scope-limited).
+
+## 2026-10-05 — devin (GLM) — AST-0012 Santa Bárbara: zoom flaring + CH4 (exploratory)
+- QGIS package `data/derived/asset-zoom/AST-0012-santa-barbara/` (git-ignored): S1 RTC VV per-scene ~10 m (11 asc track 62, ago–oct 2026) + median + ~33 m context; S2 L2A true colour (2026-09-22/09-02); FIRMS 3.503 hotspots + 69 OGIM detections; EMIT CH4 crops.
+- Flaring: densest FIRMS cell (-63.73/9.62, 303/30 d); 69 OGIM detections (Santa Bárbara/Sur, Carito-Mulata). Consistent with AST-0012 dossier (METHOD-0002).
+- CH4 (exploratory, no validated method): EMITL2BCH4ENH V002 (ppm·m) covers the cell on 2026-05-26 (max ≈2161) and 2026-04-27 (max ≈2855) — elevated enhancement; broad background/artefacts not excluded; no emission rate. Not added to dossiers.
+- Scripts committed (santabarbara_zoom_export/overview/preview, emit_ch4_pick/export); memory note on EMIT LP DAAC quirks. Open: propose METHOD-0005 (CH4) brief or validate EMIT against known plumes.

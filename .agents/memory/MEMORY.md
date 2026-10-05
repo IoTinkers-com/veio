@@ -8,3 +8,4 @@ One Markdown note per trap in this folder; add a line here when a trap is discov
 - [AOI coordinates: OGIM terminal records are offshore loading points](aoi-coordinate-verification.md) — verify AOIs against OSM + ON_OFFSHORE before any method run.
 - [VNP46/LAADS: tile convention and access quirks](vnp46-laads-quirks.md) — CMR for URLs; h00 exists (lon0=-180+h*10); v07=10..20N; SDS path with space; filter s3:// links.
 - [Sentinel-1 on Planetary Computer: use RTC, not GRD](sentinel1-rtc-planetary-computer.md) — GRD `vv`/`vh` COGs have no CRS; RTC is gamma0 float32 (water not masked); cache windowed reads.
+- [EMIT CH4 on LP DAAC: links, units and coverage](emit-ch4-lp-daac.md) — ENH is a ppm·m COG (nodata -9999); some CMR links are `s3://`; swath coverage sparse (pick best granule).
