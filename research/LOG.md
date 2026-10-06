@@ -137,3 +137,8 @@
 - Brief reescrito contra AGENTS/ADR-001/engineering-rules: paquete `veio` con adaptadores primero (regla 13), 2 contenedores sin DB/cola (regla 12), allow-lists de activo/método validado, choke point de niveles, 127.0.0.1 + fs read-only, etiqueta "re-ejecución local ≠ observación VEIO", reproducción vs valores de referencia del METHOD-0003.
 - Nuevo `docs/briefs/PLAN-local-workbench-v0.1.md`: fases P0–P5 (ADR-002/003 → paquete → API → web → CI → validación) + alineación mecánica sin agentes nuevos (lectura en runtime, código compartido, reglas nuevas en check_docs, contract tests).
 - Open: 3 decisiones del steward (ADRs, YAML de referencia vs ADR-001, basemap). Next: redactar ADR-002/003.
+
+## 2026-10-06 — devin (Claude) — ADR-002/003 aceptados (P0 cerrado)
+- Steward aprobó las 3 recomendaciones. ADR-002: 2 contenedores, sin DB/cola, 127.0.0.1, fs read-only, repo montado read-only, OSM opcional bajo política OSMF (verificada 2026-10-06). ADR-003: paquete `veio` + adaptadores, migración incremental (v0.1 solo METHOD-0003), YAML de referencia escrito a mano con chequeo verbatim vs nota del método.
+- Brief y plan actualizados (P0 ✅, decisiones resueltas, condiciones en gates P1/P3).
+- Next: P1 — paquete `veio` (adapters PC/HDX, access, manifest, m0003) + tests/reference/METHOD-0003.yaml + reglas nuevas en check_docs.

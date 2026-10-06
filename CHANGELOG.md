@@ -4,6 +4,11 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — ADR-002 + ADR-003: workbench decisions accepted (2026-10-06)
+- `docs/adr/ADR-002-local-workbench-architecture.md` (**Accepted**): two containers (`web`, `api` with embedded TiTiler + 1-job runner), no DB/queue, `127.0.0.1` only, non-root + read-only root fs, repo mounted read-only; optional OSM basemap under the OSMF Tile Usage Policy (attribution visible, no prefetch/offline, exports exclude tiles, Referer not blocked, configurable URL).
+- `docs/adr/ADR-003-veio-package-adapters-reference-values.md` (**Accepted**): `veio` package with one adapter per provider, single data-level check, manifest writer; incremental migration (v0.1 = METHOD-0003 only); hand-authored `tests/reference/METHOD-####.yaml` permitted under ADR-001, enforced by a verbatim-in-method-note check in `check_docs.py`.
+- Workbench brief and plan updated: P0 done; decisions resolved; P1/P3 gates carry the ADR conditions.
+
 ### Changed — Local workbench brief v0.1 aligned to rules + plan (2026-10-06)
 - `docs/briefs/FEATURE-local-workbench-v0.1.md` revised against AGENTS §2/§6/§10, ADR-001 and engineering rules: package-first refactor with one adapter per provider (rule 13); 2 containers, no DB/queue (rule 12); validated-method and asset allow-lists; single data-level choke point (rule 2); `127.0.0.1` binding, read-only root fs; "local re-run ≠ VEIO observation" labelling; reproduction checked against hand-authored reference values from the METHOD-0003 note; concrete negative tests.
 - `docs/briefs/PLAN-local-workbench-v0.1.md`: phases P0–P5 with owner skills and gates (ADR-002/003 first), and mechanical alignment rules (runtime read of repo metadata, shared package, new `check_docs.py` rules, contract tests) — no new agent.

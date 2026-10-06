@@ -6,10 +6,10 @@
 ## Core
 - **Problem:** after ADR-001 no figure or layer lives in the repo, and the 19 method scripts are loose, call providers directly and depend on one workstation (e.g., PROJ conflicts). Nobody else can reproduce or inspect an observation.
 - **Hypothesis:** if method code is packaged once (adapters + manifests) and run in a container, a researcher with Docker reproduces the METHOD-0003 result recorded in its method note, with no VEIO-side storage.
-- **Data needed (v0.1, keyless, PUBLIC):** DS-0002 Sentinel-1 RTC (pinned scene IDs) · DS-0010 OCHA boundaries · repo metadata (`registry/*.csv`, `docs/methods/STATUS.md`, dossiers) mounted **read-only**. Keyed sources (DS-0004 FIRMS, DS-0005/0014 Earthdata) wait until v0.2. **DS-0007 is refused.** No external basemap tiles in v0.1.
+- **Data needed (v0.1, keyless, PUBLIC):** DS-0002 Sentinel-1 RTC (pinned scene IDs) · DS-0010 OCHA boundaries · repo metadata (`registry/*.csv`, `docs/methods/STATUS.md`, dossiers) mounted **read-only**. Keyed sources (DS-0004 FIRMS, DS-0005/0014 Earthdata) wait until v0.2. **DS-0007 is refused.** Optional OSM basemap, compliant with the OSMF tile policy (ADR-002).
 - **Design:**
-  - **Package first:** a `veio` Python package with one adapter per provider (rule 13), a manifest writer and method modules. Existing scripts become thin CLI wrappers, so CLI and app run the same code.
-  - **Two containers, no DB, no queue (rule 12):** `web` (static MapLibre build) and `api` (FastAPI + embedded TiTiler + an in-process job runner, max 1 job). A job queue is added only with multiple users (scalability trigger).
+  - **Package first (ADR-003):** a `veio` Python package with one adapter per provider (rule 13), a manifest writer and method modules. v0.1 migrates only METHOD-0003; migrated scripts become thin CLI wrappers, so CLI and app run the same code.
+  - **Two containers, no DB, no queue (ADR-002, rule 12):** `web` (static MapLibre build) and `api` (FastAPI + embedded TiTiler + an in-process job runner, max 1 job). A job queue is added only with multiple users (scalability trigger).
   - **Allow-lists, not free input:** assets come from `registry/assets.csv`; runnable methods are those marked Validated/Scope-limited in `STATUS.md`, each via a declared entrypoint. No shell, no uploads.
   - **Flow:** pick AST → see the size estimate → run (download → process) → view layer, figure, manifest and **reproduction check** → export GeoTIFF/GeoJSON.
 - **Security & provenance impact:**
