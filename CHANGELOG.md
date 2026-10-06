@@ -4,6 +4,11 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — METHOD-0002 v0.4 run (2026-10-05)
+- Santa Bárbara per-nucleus flaring characterization (FIRMS 90-day window, single-link nuclei at ~1.1 km), pre-registered in `4c34ab0` before execution; outputs `data/derived/method-0002/v0.4/` + manifest, figure under `docs/methods/figures/`.
+- **Verdict: NOT validated (C3).** Structure and persistence robust (9 nuclei, 8 detected on ≥30% of 90 days; top 4,327 detections at 97.8% persistence); Bajo Grande control 0. OGIM match within 1.5 km = 60.3% (< 70% threshold), so no dossier observation added. Implementation correction (centroid → nucleus membership) documented; criterion unchanged.
+- Fixes the FIRMS 5-day-chunk header-join bug (parse per chunk) and updates the memory note.
+
 ### Added — METHOD-0003 v0.1 run (2026-10-05)
 - First SAR method: Sentinel-1 RTC VV (S1A descending track 171), pre-registered in `b28e66c` before execution; outputs `data/derived/method-0003/v0.1/` with manifest + checksums, figure under `docs/methods/figures/`.
 - **Verdict: VALIDATED (scope-limited).** One new persistent radar-bright object detected at Lagunillas (10.13715/−71.2703), bright in 11/11 post-window scenes vs 0/7 pre, first observed 2025-09-01, confirmed in ascending geometry; both open-lake controls 0. Validated only for "new persistent bright object over pre-window dark water", not for identity or open-water platform/vessel detection (eastern-lake screening negative).

@@ -17,6 +17,7 @@
 
 ## Status
 - Executed 2026-10-04 (v0.1.0 → v0.3.0; script `scripts/method0002_validate.py`; outputs `data/derived/method-0002/`, manifest with checksums).
+- v0.4 (Santa Bárbara per-nucleus characterization) executed 2026-10-05 (pre-registered 4c34ab0; script `scripts/method0002_v04.py`; outputs `data/derived/method-0002/v0.4/`). Verdict: NOT validated (C3).
 
 ## Validation results (2026-10-04, window 2026-09-04..10-03, VIIRS S-NPP + NOAA-20 NRT, 29,558 hotspots in VE bbox)
 | Test | Criterion | r=1.5 km | r=5.0 km | Result |
@@ -47,3 +48,32 @@ Scope: move METHOD-0002 from a coarse differential/density indicator to a **per-
 
 - Validated for per-nucleus characterization only if all four pass; otherwise the negative is recorded.
 - Known limits: FIRMS cannot separate flaring from other combustion (biomass burning); OGIM is a single snapshot (2026-09-14); FRP is radiometric, not an emitted volume; persistence is detection frequency, not continuous combustion.
+
+## v0.4 results (2026-10-05; script `scripts/method0002_v04.py`; outputs `data/derived/method-0002/v0.4/` + manifest; pre-registered 4c34ab0)
+Window 2026-07-07..2026-10-04 (90 days), VIIRS NOAA-20 + S-NPP: **11,480 hotspots** in the box.
+| Criterion | Result | Pass? |
+|---|---|---|
+| C1 structure | **9 nuclei** (≥5 detections, eps 0.01°); largest 4,327 detections at −63.547/9.653 | pass |
+| C2 persistence | **8/9** nuclei detected on ≥30% of days; top six on 93–98% of days | pass |
+| C3 OGIM match | **47/78** OGIM detections (60.3%) within 1.5 km of a nucleus (threshold 70%) | **FAIL** |
+| C4 control | Bajo Grande box: **0 nuclei** | pass |
+
+| nucleus | detections | days (of 90) | persistence | mean FRP | max FRP | matched OGIM |
+|---|---|---|---|---|---|---|
+| 3 | 4,327 | 88 | 97.8% | 6.2 | 74.7 | 14 |
+| 1 | 2,689 | 88 | 97.8% | 10.7 | 221.6 | 11 |
+| 4 | 2,128 | 87 | 96.7% | 10.2 | 162.8 | 12 |
+| 6 | 1,138 | 87 | 96.7% | 4.7 | 33.6 | 2 |
+| 0 | 613 | 86 | 95.6% | 4.2 | 14.9 | 1 |
+| 5 | 343 | 84 | 93.3% | 4.2 | 12.3 | 3 |
+| 2 | 153 | 65 | 72.2% | 1.6 | 6.6 | 4 |
+| 7 | 68 | 31 | 34.4% | 1.3 | 3.8 | 4 |
+| 16 | 5 | 3 | 3.3% | 1.3 | 2.1 | 0 |
+
+![nuclei](figures/METHOD-0002-v0.4-santabarbara.png)
+*Contains modified NASA FIRMS data (VIIRS NOAA-20 + S-NPP).*
+
+- **Verdict: NOT validated as registered** (C3 failed). The **per-nucleus structure and persistence are robust** (C1/C2/C4 pass; 8 of 9 nuclei on ≥30% of 90 days), but the OGIM cross-match at 1.5 km reaches only 60.3% (< 70%). No Derived observation added to dossiers.
+- Implementation note: the first verdict computed C3 against the nucleus **centroid** (19.2%); corrected to nucleus **membership** (per the wording "within 1.5 km of a nucleus") → 60.3%. The criterion was not changed; verdict unchanged. Diagnostic (not criteria): 3 km → 73.1%, 5 km → 91.0%.
+- Interpretation of the C3 failure: many OGIM flaring points are isolated or in fields outside the spatially-clustered FIRMS nuclei (e.g. separate CARITO-MULATA points), and OGIM coordinate precision is unquantified — a 1.5 km match is not supported by this pair of datasets.
+- **v0.5 requirements (pre-registered):** justify the match radius from OGIM coordinate precision or use a facility-level match; cross-check nuclei against an independent flare-location source; separate industrial flaring from biomass burning; report FRP-integrated metrics, not just counts.

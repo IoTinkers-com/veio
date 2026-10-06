@@ -92,3 +92,9 @@
 - Flaring: densest FIRMS cell (-63.73/9.62, 303/30 d); 69 OGIM detections (Santa Bárbara/Sur, Carito-Mulata). Consistent with AST-0012 dossier (METHOD-0002).
 - CH4 (exploratory, no validated method): EMITL2BCH4ENH V002 (ppm·m) covers the cell on 2026-05-26 (max ≈2161) and 2026-04-27 (max ≈2855) — elevated enhancement; broad background/artefacts not excluded; no emission rate. Not added to dossiers.
 - Scripts committed (santabarbara_zoom_export/overview/preview, emit_ch4_pick/export); memory note on EMIT LP DAAC quirks. Open: propose METHOD-0005 (CH4) brief or validate EMIT against known plumes.
+
+## 2026-10-05 — devin (GLM) — METHOD-0002 v0.4 Santa Bárbara per-nucleus (NOT validated)
+- FIRMS 90 días (N20+S-NPP), 11.480 hotspots; clustering single-link eps 0.01° (~1,1 km) → 9 núcleos; 8 detectados en ≥30% de los días (top: 4.327 detecciones, 97,8% de días). Control Bajo Grande: 0 núcleos.
+- C3 (70% de OGIM a 1,5 km) falla: 47/78 = 60,3% → NO validada (C1/C2/C4 pasan). Corrección de implementación centroide→pertenencia (criterio sin cambio). Diagnóstico: 3 km 73,1%, 5 km 91,0%. Sin observación de dossier.
+- Bug corregido: los chunks FIRMS de 5 días repiten encabezado (parsear por bloque); nota de memoria actualizada. Pre-registro 4c34ab0; figura + manifiesto en repo.
+- Open: v0.5 (radio justificado por precisión OGIM o match por instalación; separar flaring de quema de biomasa; métricas integradas de FRP). Validados: METHOD-0002 (diferencial/densidad), METHOD-0003 (objeto brillante).
