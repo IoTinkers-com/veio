@@ -31,3 +31,19 @@
 - **Verdict:** NOT validated for site-level detection or absence claims. Validated as **cluster-density and facility-differential indicator** (controls clean; active/inactive discrimination works at 5 km with per-facility AOIs).
 - Deviations from pre-registration (documented in manifest): radius 1.5→5 km after diagnostic; midpoint AOI → per-facility AOIs (scripting bug); 2024-09-17 CRP event test substituted by differential test (NRT API covers ≤1 year).
 - Interpretation for OGIM mismatch: OGIM detections (2026-09-14 snapshot) vs FIRMS 30-day window differ in method and epoch; coordinate precision of OGIM points unquantified [GAP].
+
+## v0.4 pre-registration (2026-10-05, committed before execution) — Santa Bárbara per-nucleus characterization
+Scope: move METHOD-0002 from a coarse differential/density indicator to a **per-flare-nucleus** temporal characterization of the Santa Bárbara cluster (the densest in the VE extract).
+- Data: FIRMS VIIRS S-NPP + NOAA-20 NRT, box −63.85,9.45,−63.45,9.80, **90-day window** (5-day chunks).
+- Nucleus: single-link (connected-components) spatial clustering at eps = 0.01° (~1.1 km), minimum 5 detections.
+- Metrics per nucleus: detections, days detected, persistence % of window days, mean/max FRP, night %, satellites, first/last date, and OGIM detections matched within 1.5 km.
+
+| Criterion | Pass rule |
+|---|---|
+| C1 structure | ≥8 nuclei with ≥5 detections |
+| C2 persistence | ≥50% of nuclei detected on ≥30% of window days |
+| C3 OGIM match | ≥70% of OGIM flaring detections in the box within 1.5 km of a nucleus |
+| C4 control | Bajo Grande box (−71.78,10.55,−71.65,10.67) → 0 nuclei |
+
+- Validated for per-nucleus characterization only if all four pass; otherwise the negative is recorded.
+- Known limits: FIRMS cannot separate flaring from other combustion (biomass burning); OGIM is a single snapshot (2026-09-14); FRP is radiometric, not an emitted volume; persistence is detection frequency, not continuous combustion.
