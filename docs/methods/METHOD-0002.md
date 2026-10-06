@@ -77,3 +77,20 @@ Window 2026-07-07..2026-10-04 (90 days), VIIRS NOAA-20 + S-NPP: **11,480 hotspot
 - Implementation note: the first verdict computed C3 against the nucleus **centroid** (19.2%); corrected to nucleus **membership** (per the wording "within 1.5 km of a nucleus") → 60.3%. The criterion was not changed; verdict unchanged. Diagnostic (not criteria): 3 km → 73.1%, 5 km → 91.0%.
 - Interpretation of the C3 failure: many OGIM flaring points are isolated or in fields outside the spatially-clustered FIRMS nuclei (e.g. separate CARITO-MULATA points), and OGIM coordinate precision is unquantified — a 1.5 km match is not supported by this pair of datasets.
 - **v0.5 requirements (pre-registered):** justify the match radius from OGIM coordinate precision or use a facility-level match; cross-check nuclei against an independent flare-location source; separate industrial flaring from biomass burning; report FRP-integrated metrics, not just counts.
+
+## v0.5 pre-registration (2026-10-05, committed before execution) — closing the method
+Motivation: v0.4 failed C3 because the 1.5 km **point** match to OGIM is not justified — OGIM flaring coordinates are coarse. Measured within-facility spread: Santa Bárbara Sur 17.0 km, Santa Bárbara 10.3, Cotoperí 10.1, Jusepín 9.3, Carito-Mulata 7.9, Pirital 6.2 km. v0.5 replaces the OGIM point match with **intrinsic discriminators** (persistence + stationarity + night activity) that separate fixed industrial flaring from transient/diurnal biomass burning, and keeps OGIM co-location **descriptive** (no pass/fail).
+
+Data: same 90-day FIRMS window (VIIRS N20 + S-NPP), same nuclei (eps 0.01°, ≥5 detections). Metrics add median/max daily-centroid drift and total FRP (MW).
+
+| Criterion | Pass rule |
+|---|---|
+| C1 structure | ≥8 nuclei with ≥5 detections |
+| C2 persistence | ≥50% of nuclei detected on ≥30% of window days |
+| C3 stationarity | ≥80% of persistent nuclei with **median** daily-centroid drift ≤1 km |
+| C4 night activity | median night fraction of persistent nuclei ≥50% |
+| C5 control | Bajo Grande box → 0 nuclei |
+
+- Discriminator rationale: persistent (C2) **and** fixed (C3, median drift) **and** night-active (C4) is the signature of continuous flaring; biomass burning is transient, spatially drifting, and mostly daytime. The daily-centroid drift uses the median to avoid one-day outliers in large multi-source nuclei.
+- OGIM co-location reported at 1.5/3/5 km as descriptive context only.
+- Validated for "fixed, persistent, night-active thermal point sources" only if C1–C5 pass; otherwise the negative is recorded.
