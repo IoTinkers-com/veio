@@ -104,3 +104,9 @@
 - Resultado: 9 núcleos; 8 en ≥30% de 90 días; mediana noche 87,3%; 8/8 persistentes estacionarios; control Bajo Grande 0 → VALIDADO (alcance: fuentes térmicas fijas, persistentes, nocturnas). OGIM co-locación descriptiva (91% a 5 km). Pre-registro abcfccf.
 - Observación Derived añadida a AST-0012 (núcleos, persistencia, FRP medio/máx, noche, deriva). FRP = potencia radiativa por pasada, no volumen. Figura + manifiesto en repo.
 - Open: v0.6 opcional (match por instalación con fuente independiente; métrica FRP integrada en el tiempo). Validados: METHOD-0002 (diferencial/densidad + núcleos fijos), METHOD-0003 (objeto brillante).
+
+## 2026-10-06 — devin (GLM) — Fundación: explicador de plataforma + tablero de métodos
+- Creado `docs/foundation/PLATFORM.md` (+ `.es.md`): one-pager ejecutivo "cómo funciona VEIO" — 4 capas, ejemplo Santa Bárbara de punta a punta, métodos de un vistazo, semáforo de estado, qué podemos/no podemos afirmar, brechas y glosario. Diagrama `figures/pipeline.svg`.
+- Creado `docs/methods/STATUS.md` (+ `.es.md`): una fila por método (pregunta, insumo DS, procesamiento llano, estado de validación, salidas, dossiers) + "qué puede/no puede decir" + cola.
+- README EN/ES enlaza ambos como puerta de entrada; línea de estado actualizada.
+- Brecha detectada y reflejada: 11/17 activos sin observación propia; 2/4 métodos sin validar; CH4 sin método. Next: definir títulos de columnas/glosario con el steward o arrancar METHOD-0005 (CH4) brief.

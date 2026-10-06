@@ -4,6 +4,11 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — Platform explainer + method status dashboard (2026-10-06)
+- `docs/foundation/PLATFORM.md` + `.es.md`: executive, plain-language "how VEIO works" one-pager — the four layers, a worked end-to-end example (Santa Bárbara), the four methods at a glance, the status vocabulary, what we can/cannot claim, honest gaps, and a glossary. Pipeline diagram `docs/foundation/figures/pipeline.svg`.
+- `docs/methods/STATUS.md` + `.es.md`: one row per method (question, input, plain processing, validation status, outputs, dossiers fed) + "what each method can/cannot say" + the queue.
+- README (EN/ES) now links both as the entry point; status line refreshed.
+
 ### Added — METHOD-0002 v0.5 run (2026-10-05)
 - Closes the Santa Bárbara nuclei method: replaces the unjustified 1.5 km OGIM point match (OGIM within-facility spread up to 17 km) with intrinsic discriminators — persistence + median stationarity + night activity. Pre-registered `abcfccf`; outputs `data/derived/method-0002/v0.5/`, figure committed.
 - **Verdict: VALIDATED (scope-limited)** for fixed, persistent, night-active thermal point sources: 9 nuclei, 8 on ≥30% of 90 days, median night fraction 87%, median daily-centroid drift ≤1 km, Bajo Grande control 0. Derived observation added to AST-0012.
