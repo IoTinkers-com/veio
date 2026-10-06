@@ -4,6 +4,11 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — Documentation ownership + CI docs-drift check (2026-10-06)
+- `AGENTS.md` §11 now assigns documentation ownership explicitly (no dedicated docs agent): each role owns its artifacts; `task-close` refreshes `STATUS.md`/`PLATFORM.md` when a method's status or a Derived observation changes; `docs-bilingual` enforces EN/ES parity; `product-architect` owns the foundation dashboards.
+- `scripts/check_docs.py` (stdlib) added to CI (`docs` job): blocks drift between registry and files, method notes and `STATUS.md`, `**Derived**` citations and method notes, and orphan `.es.md` files. First run found and fixed a missing manifest citation in AST-0014.
+- `task-close` and `docs-bilingual` skills updated accordingly.
+
 ### Added — Platform explainer + method status dashboard (2026-10-06)
 - `docs/foundation/PLATFORM.md` + `.es.md`: executive, plain-language "how VEIO works" one-pager — the four layers, a worked end-to-end example (Santa Bárbara), the four methods at a glance, the status vocabulary, what we can/cannot claim, honest gaps, and a glossary. Pipeline diagram `docs/foundation/figures/pipeline.svg`.
 - `docs/methods/STATUS.md` + `.es.md`: one row per method (question, input, plain processing, validation status, outputs, dossiers fed) + "what each method can/cannot say" + the queue.

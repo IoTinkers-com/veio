@@ -24,7 +24,7 @@
 | [Dec, year UNVERIFIED] | Venezuela Política | TAECJAA loading Merey 16/18 mainly to Asia (Singapore, Malaysia, China); waiting vessels and STS transfers reported | Low (single outlet, unnamed report) |
 
 ## Change indicators
-- **Derived** (METHOD-0002 v0.3.0, recomputed at corrected centroid with `scripts/check_jose_aoi.py` on the same cached inputs): thermal hotspot detections observed within 5 km on 30 of 30 days (750 detections; 311 within 1.5 km, 2026-09-04..10-03) — compatible with continuous industrial thermal sources (upgraders/flares). Confidence Moderate. Correction 2026-10-04: the earlier figure (122 detections / 27 days) referred to the offshore terminal point ~29 km NE, not the complex. Remaining methods: pending.
+- **Derived** (METHOD-0002 v0.3.0, manifest `data/derived/method-0002/manifest.json`, recomputed at corrected centroid with `scripts/check_jose_aoi.py` on the same cached inputs): thermal hotspot detections observed within 5 km on 30 of 30 days (750 detections; 311 within 1.5 km, 2026-09-04..10-03) — compatible with continuous industrial thermal sources (upgraders/flares). Confidence Moderate. Correction 2026-10-04: the earlier figure (122 detections / 27 days) referred to the offshore terminal point ~29 km NE, not the complex. Remaining methods: pending.
 
 ## Environmental observations
 - None recorded in current sources for the terminal itself.

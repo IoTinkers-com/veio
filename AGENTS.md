@@ -55,6 +55,7 @@ Before implementing any significant feature, `product-architect` produces a **fe
 
 ## 11. Roles (skills)
 `product-architect` (coordinator), `dataset-card`, `geo-method`, `asset-dossier`, `scientific-review`, `web-security`, `docs-bilingual`, `task-close`, `data-pipeline`, `devops`, `backend-api`, `map-frontend`, `contribution-review`. The Product Architect coordinates; no role overrides an ADR without a new ADR. Known traps go to `.agents/memory/` (index in `MEMORY.md`, one note per trap).
+- **Documentation ownership (no dedicated docs agent):** each role updates its own artifacts; `task-close` updates `CHANGELOG.md`, `research/LOG.md` and `.agents/memory/` every task; `docs-bilingual` enforces EN/ES parity; `product-architect` owns `docs/foundation/PLATFORM.md` and `docs/methods/STATUS.md`, refreshed whenever a method's validation status or a Derived observation changes. CI runs `scripts/check_docs.py` to block drift (registry↔files, methods↔dashboard, Derived citations, bilingual orphans).
 
 ## 12. Conventions
 - IDs: `DS-####` dataset · `AST-####` asset · `OBS-####` observation · `EVD-####` evidence · `ANM-####` anomaly · `ADR-###` decision · `CTR-####` contribution. Next ID = max existing + 1; check files/CSV before writing.

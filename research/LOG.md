@@ -110,3 +110,8 @@
 - Creado `docs/methods/STATUS.md` (+ `.es.md`): una fila por método (pregunta, insumo DS, procesamiento llano, estado de validación, salidas, dossiers) + "qué puede/no puede decir" + cola.
 - README EN/ES enlaza ambos como puerta de entrada; línea de estado actualizada.
 - Brecha detectada y reflejada: 11/17 activos sin observación propia; 2/4 métodos sin validar; CH4 sin método. Next: definir títulos de columnas/glosario con el steward o arrancar METHOD-0005 (CH4) brief.
+
+## 2026-10-06 — devin (GLM) — Propiedad documental + chequeo de drift en CI
+- Respuesta a «¿hay un agente que mantenga los docs?»: no hay rol dedicado; propiedad distribuida. Se formalizó en AGENTS.md §11 (cada rol sus artefactos; task-close refresca STATUS/PLATFORM si cambia estado de método u observación Derived; product-architect dueño de la fundación).
+- Nuevo `scripts/check_docs.py` (stdlib) en CI job docs: registry↔archivos, METHOD↔STATUS (EN+ES), citas Derived↔nota de método, huérfanos .es.md. Primera corrida detectó y se corrigió una cita de manifiesto faltante en AST-0014.
+- Skills task-close y docs-bilingual actualizadas. Gate docs ahora exige check_docs. Next: Matriz Activo × Evidencia (pieza 3) o brief METHOD-0005.

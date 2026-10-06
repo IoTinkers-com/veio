@@ -37,6 +37,8 @@ jobs:
             if [ "$name" != "$dir" ]; then echo "ERROR: $f name '$name' != dir '$dir'"; fail=1; fi
           done
           exit $fail
+      - name: Docs drift check
+        run: python3 scripts/check_docs.py
       - name: Markdown link check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
