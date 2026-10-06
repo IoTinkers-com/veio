@@ -98,3 +98,9 @@
 - C3 (70% de OGIM a 1,5 km) falla: 47/78 = 60,3% → NO validada (C1/C2/C4 pasan). Corrección de implementación centroide→pertenencia (criterio sin cambio). Diagnóstico: 3 km 73,1%, 5 km 91,0%. Sin observación de dossier.
 - Bug corregido: los chunks FIRMS de 5 días repiten encabezado (parsear por bloque); nota de memoria actualizada. Pre-registro 4c34ab0; figura + manifiesto en repo.
 - Open: v0.5 (radio justificado por precisión OGIM o match por instalación; separar flaring de quema de biomasa; métricas integradas de FRP). Validados: METHOD-0002 (diferencial/densidad), METHOD-0003 (objeto brillante).
+
+## 2026-10-05 — devin (GLM) — METHOD-0002 v0.5 Santa Bárbara (VALIDADO, alcance limitado)
+- v0.4 falló por un match OGIM a 1,5 km injustificado: la dispersión interna de las coords OGIM llega a 17 km (Santa Bárbara Sur), 10,3 (Santa Bárbara), 9,3 (Jusepín). v0.5 sustituye ese criterio por discriminadores propios: persistencia + estacionariedad (mediana del desvío diario ≤1 km) + actividad nocturna.
+- Resultado: 9 núcleos; 8 en ≥30% de 90 días; mediana noche 87,3%; 8/8 persistentes estacionarios; control Bajo Grande 0 → VALIDADO (alcance: fuentes térmicas fijas, persistentes, nocturnas). OGIM co-locación descriptiva (91% a 5 km). Pre-registro abcfccf.
+- Observación Derived añadida a AST-0012 (núcleos, persistencia, FRP medio/máx, noche, deriva). FRP = potencia radiativa por pasada, no volumen. Figura + manifiesto en repo.
+- Open: v0.6 opcional (match por instalación con fuente independiente; métrica FRP integrada en el tiempo). Validados: METHOD-0002 (diferencial/densidad + núcleos fijos), METHOD-0003 (objeto brillante).

@@ -22,6 +22,7 @@
 
 ## Change indicators
 - **Derived** (METHOD-0002 v0.3.0, manifest `data/derived/method-0002/manifest.json`): 1,046 thermal hotspot detections within 5 km of the Santa Bárbara/Sur cluster over 30 days (2026-09-04..10-03) — dense persistent thermal activity compatible with extensive flaring; largest cluster tested in the VE extract. Confidence Moderate. Remaining methods: pending.
+- **Derived** (METHOD-0002 v0.5, pre-registered `abcfccf`, run 2026-10-05; manifest `data/derived/method-0002/v0.5/manifest.json`): the cluster resolves into **9 thermal nuclei** over a 90-day window (2026-07-07..10-04); **8 detected on ≥30% of days** (largest 4,327 detections at 97.8% persistence, mean FRP 6.2 MW, max 74.7 MW; second 2,689 at 97.8%, mean FRP 10.7 MW, max 221.6 MW), all **night-active** (median night fraction 87%) and **stationary** (median daily-centroid drift ≤1 km) — compatible with continuous flaring; Bajo Grande control 0 nuclei. OGIM co-location 91% within 5 km (OGIM coordinates coarse). Confidence Moderate. Figure `docs/methods/figures/METHOD-0002-v0.5-santabarbara.png`.
 
 ## Environmental observations
 - Dense flaring cluster observed (DS-0012) — detections only; no volume, efficiency or cause claims.
@@ -33,10 +34,10 @@
 - **Interpretation:** Diluent-role economics plausibly keep the field prioritized despite infrastructure fragility. Never merge with observations.
 
 ## Provenance
-- DS-0012 OGIM v3.0 (accessed 2026-10-04) · ghm.com.ve (Reuters copy, accessed 2026-10-04) · descifrado.com 2021-04-22 (2026-10-04) · grupolunarodriguez.com (2026-10-04)
+- DS-0012 OGIM v3.0 (accessed 2026-10-04) · ghm.com.ve (Reuters copy, accessed 2026-10-04) · descifrado.com 2021-04-22 (2026-10-04) · grupolunarodriguez.com (2026-10-04) · DS-0004 NASA FIRMS (VIIRS N20 + S-NPP, 90-day window; processed by VEIO 2026-10-05)
 
 ## Limitations
-- Reuters article date not verified; current well count/production unknown [GAP]; flaring volumes unquantified; no imagery-derived observations yet.
+- Reuters article date not verified; current well count/production unknown [GAP]; flaring **volumes** (and emitted energy) unquantified — FRP is radiative power per overpass, not an emission rate; no optical/SAR imagery observations yet; OGIM coordinates too coarse for a point-level cross-check.
 
 ## Confidence
 - Moderate — diluent role well-documented; current status partial.

@@ -4,6 +4,10 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — METHOD-0002 v0.5 run (2026-10-05)
+- Closes the Santa Bárbara nuclei method: replaces the unjustified 1.5 km OGIM point match (OGIM within-facility spread up to 17 km) with intrinsic discriminators — persistence + median stationarity + night activity. Pre-registered `abcfccf`; outputs `data/derived/method-0002/v0.5/`, figure committed.
+- **Verdict: VALIDATED (scope-limited)** for fixed, persistent, night-active thermal point sources: 9 nuclei, 8 on ≥30% of 90 days, median night fraction 87%, median daily-centroid drift ≤1 km, Bajo Grande control 0. Derived observation added to AST-0012.
+
 ### Added — METHOD-0002 v0.4 run (2026-10-05)
 - Santa Bárbara per-nucleus flaring characterization (FIRMS 90-day window, single-link nuclei at ~1.1 km), pre-registered in `4c34ab0` before execution; outputs `data/derived/method-0002/v0.4/` + manifest, figure under `docs/methods/figures/`.
 - **Verdict: NOT validated (C3).** Structure and persistence robust (9 nuclei, 8 detected on ≥30% of 90 days; top 4,327 detections at 97.8% persistence); Bajo Grande control 0. OGIM match within 1.5 km = 60.3% (< 70% threshold), so no dossier observation added. Implementation correction (centroid → nucleus membership) documented; criterion unchanged.
