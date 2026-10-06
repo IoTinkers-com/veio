@@ -115,3 +115,8 @@
 - Respuesta a «¿hay un agente que mantenga los docs?»: no hay rol dedicado; propiedad distribuida. Se formalizó en AGENTS.md §11 (cada rol sus artefactos; task-close refresca STATUS/PLATFORM si cambia estado de método u observación Derived; product-architect dueño de la fundación).
 - Nuevo `scripts/check_docs.py` (stdlib) en CI job docs: registry↔archivos, METHOD↔STATUS (EN+ES), citas Derived↔nota de método, huérfanos .es.md. Primera corrida detectó y se corrigió una cita de manifiesto faltante en AST-0014.
 - Skills task-close y docs-bilingual actualizadas. Gate docs ahora exige check_docs. Next: Matriz Activo × Evidencia (pieza 3) o brief METHOD-0005.
+
+## 2026-10-06 — devin (GLM) — ADR-001 (sin artefactos generados en el repo) + brief del workbench local
+- Decisión (Opción A del steward): el repo público solo guarda código + metadatos + texto; ninguna figura/capa/ráster/JSON derivado se commitea. Se genera en local con la app; el Atlas público futuro usará object storage. Registrado en ADR-001 (Accepted).
+- Escrito `docs/briefs/FEATURE-local-workbench-v0.1.md`: docker-compose (web MapLibre + api/worker FastAPI + tiles TiTiler + volumen ./data); usuario investigador; descargar→procesar→ver; PUBLIC sin claves en v1; DS-0007 excluido; nada fuera de ./data.
+- Migración pendiente (ADR-001): quitar `docs/methods/figures/*.png` del repo, convertir enlaces de figuras en METHOD/dossiers a rutas locales esperadas, ajustar check_docs/link-check. Next: ejecutar esa migración o el brief METHOD-0005 (CH4).

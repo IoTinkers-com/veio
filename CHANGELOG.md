@@ -4,6 +4,11 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — ADR-001 + local workbench brief (2026-10-06)
+- `docs/adr/ADR-001-no-generated-artifacts-in-repo.md`: **Accepted** — the repository holds only code, metadata and text; no generated artifact (raster, layer, figure, derived JSON) is committed; outputs are generated locally and, for the future public Atlas, served from object storage.
+- `docs/briefs/FEATURE-local-workbench-v0.1.md`: docker-compose local workbench (download → process → display) for researchers; PUBLIC datasets only; DS-0007 excluded; nothing written outside `./data`.
+- Migration implied by ADR-001 (next step): remove `docs/methods/figures/*.png`, convert method/dossier figure links to expected local paths, adjust CI checks.
+
 ### Added — Documentation ownership + CI docs-drift check (2026-10-06)
 - `AGENTS.md` §11 now assigns documentation ownership explicitly (no dedicated docs agent): each role owns its artifacts; `task-close` refreshes `STATUS.md`/`PLATFORM.md` when a method's status or a Derived observation changes; `docs-bilingual` enforces EN/ES parity; `product-architect` owns the foundation dashboards.
 - `scripts/check_docs.py` (stdlib) added to CI (`docs` job): blocks drift between registry and files, method notes and `STATUS.md`, `**Derived**` citations and method notes, and orphan `.es.md` files. First run found and fixed a missing manifest citation in AST-0014.
