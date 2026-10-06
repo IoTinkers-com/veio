@@ -4,6 +4,10 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Changed — Local workbench brief v0.1 aligned to rules + plan (2026-10-06)
+- `docs/briefs/FEATURE-local-workbench-v0.1.md` revised against AGENTS §2/§6/§10, ADR-001 and engineering rules: package-first refactor with one adapter per provider (rule 13); 2 containers, no DB/queue (rule 12); validated-method and asset allow-lists; single data-level choke point (rule 2); `127.0.0.1` binding, read-only root fs; "local re-run ≠ VEIO observation" labelling; reproduction checked against hand-authored reference values from the METHOD-0003 note; concrete negative tests.
+- `docs/briefs/PLAN-local-workbench-v0.1.md`: phases P0–P5 with owner skills and gates (ADR-002/003 first), and mechanical alignment rules (runtime read of repo metadata, shared package, new `check_docs.py` rules, contract tests) — no new agent.
+
 ### Added — Asset × Evidence matrix (2026-10-06)
 - `docs/assets/EVIDENCE-MATRIX.md` + `.es.md`: 17 assets × methods with the observation type per cell (● validated Derived · ○ unvalidated visual check · ◐ exploratory · — none). Exposes the gaps: 11 of 17 assets have no VEIO-derived observation; methods 0001/0004 unvalidated; methane exploratory.
 - `scripts/check_docs.py` now fails if any asset in `registry/assets.csv` or any `METHOD-####` is missing from the matrix (EN + ES). README and PLATFORM link it.

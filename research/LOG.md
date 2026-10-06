@@ -132,3 +132,8 @@
 - Brechas expuestas: 11/17 activos sin observación propia (AST-0003,0005,0006,0007,0008,0010,0011,0013,0015,0016,0017); 0001/0004 sin validar; CH4 solo exploratorio; coords [GAP] en 0005–0008/0010/0015.
 - `check_docs.py`: nueva regla — todo activo y todo METHOD debe aparecer en la matriz (EN+ES). README y PLATFORM enlazan la matriz. Gate docs OK.
 - Next: arrancar el workbench local (brief listo) o brief METHOD-0005 (CH4).
+
+## 2026-10-06 — devin (Claude) — Brief del workbench revisado + plan
+- Brief reescrito contra AGENTS/ADR-001/engineering-rules: paquete `veio` con adaptadores primero (regla 13), 2 contenedores sin DB/cola (regla 12), allow-lists de activo/método validado, choke point de niveles, 127.0.0.1 + fs read-only, etiqueta "re-ejecución local ≠ observación VEIO", reproducción vs valores de referencia del METHOD-0003.
+- Nuevo `docs/briefs/PLAN-local-workbench-v0.1.md`: fases P0–P5 (ADR-002/003 → paquete → API → web → CI → validación) + alineación mecánica sin agentes nuevos (lectura en runtime, código compartido, reglas nuevas en check_docs, contract tests).
+- Open: 3 decisiones del steward (ADRs, YAML de referencia vs ADR-001, basemap). Next: redactar ADR-002/003.
