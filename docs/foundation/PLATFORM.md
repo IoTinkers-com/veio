@@ -58,6 +58,7 @@ Detail and live status: `docs/methods/STATUS.md`.
 | The whole picture | this page + `docs/methods/STATUS.md` |
 | How one method works | `docs/methods/METHOD-####.md` |
 | What we know about one asset | `docs/assets/AST-####-*.md` |
+| Which assets still have gaps | `docs/assets/EVIDENCE-MATRIX.md` |
 | A dataset's license and coverage | `docs/datasets/DS-####.md` |
 | What changed recently | `CHANGELOG.md`, `research/LOG.md` |
 

@@ -58,6 +58,7 @@ Detalle y estado en vivo: `docs/methods/STATUS.md`.
 | La foto completa | esta página + `docs/methods/STATUS.md` |
 | Cómo funciona un método | `docs/methods/METHOD-####.md` |
 | Qué sabemos de un activo | `docs/assets/AST-####-*.md` |
+| Qué activos siguen con brechas | `docs/assets/EVIDENCE-MATRIX.md` |
 | Licencia y cobertura de un dataset | `docs/datasets/DS-####.md` |
 | Qué cambió hace poco | `CHANGELOG.md`, `research/LOG.md` |
 

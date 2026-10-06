@@ -126,3 +126,9 @@
 - Notas METHOD-0001..0004 y dossiers AST-0009/0012/0014: referencias de figuras convertidas a rutas locales esperadas (código en línea), no archivos del repo.
 - `check_docs.py` ampliado: falla si hay cualquier ráster/figura commiteada (ADR-001). El SVG del pipeline se mantiene (fuente dibujada a mano, no generada). Registry↔archivos, METHOD↔STATUS, citas Derived, huérfanos ES: OK.
 - Repo alineado a ADR-001: solo código + metadatos + texto. Next: Matriz Activo × Evidencia o arrancar el workbench (brief ya escrito).
+
+## 2026-10-06 — devin (GLM) — Matriz Activo × Evidencia (detección de brechas)
+- Creado `docs/assets/EVIDENCE-MATRIX.md` (+ `.es.md`): 17 activos × métodos; celda ● (Derived validado) / ○ (chequeo visual de método no validado) / ◐ (exploratorio) / — (ninguna). Basada en las observaciones Derived de los dossiers y en los estados de METHOD-0001..0004.
+- Brechas expuestas: 11/17 activos sin observación propia (AST-0003,0005,0006,0007,0008,0010,0011,0013,0015,0016,0017); 0001/0004 sin validar; CH4 solo exploratorio; coords [GAP] en 0005–0008/0010/0015.
+- `check_docs.py`: nueva regla — todo activo y todo METHOD debe aparecer en la matriz (EN+ES). README y PLATFORM enlazan la matriz. Gate docs OK.
+- Next: arrancar el workbench local (brief listo) o brief METHOD-0005 (CH4).

@@ -10,6 +10,7 @@ Fails (exit 1) when the public docs drift from the repo:
      METHOD-#### that has a method note (and a manifest path).
   4. Bilingual orphans: a `X.es.md` without its `X.md` sibling.
   5. No generated artifacts in the repo (ADR-001): no committed raster/figure.
+  6. Asset × Evidence matrix lists every asset and every method (EN + ES).
 
 Usage: py -3 scripts/check_docs.py
 """
@@ -109,6 +110,24 @@ def check_no_generated_artifacts():
                           "(generate locally under data/ instead)")
 
 
+def check_evidence_matrix():
+    """Every asset and every method must appear in the matrix (EN + ES)."""
+    ids = {r["id"] for r in csv_rows(ROOT / "registry" / "assets.csv")}
+    methods = {f.stem for f in (ROOT / "docs" / "methods").glob("METHOD-*.md")}
+    for name in ("EVIDENCE-MATRIX.md", "EVIDENCE-MATRIX.es.md"):
+        p = ROOT / "docs" / "assets" / name
+        if not p.exists():
+            errors.append(f"missing required doc: docs/assets/{name}")
+            continue
+        text = read(p)
+        for aid in sorted(ids):
+            if aid not in text:
+                errors.append(f"docs/assets/{name}: asset {aid} missing")
+        for mid in sorted(methods):
+            if mid not in text:
+                errors.append(f"docs/assets/{name}: method {mid} missing")
+
+
 def main():
     check_registry("registry/datasets.csv", "DS", "docs/datasets")
     check_registry("registry/assets.csv", "AST", "docs/assets")
@@ -116,6 +135,7 @@ def main():
     check_derived()
     check_orphans()
     check_no_generated_artifacts()
+    check_evidence_matrix()
     if errors:
         print(f"DOCS DRIFT: {len(errors)} problem(s)")
         for e in errors:

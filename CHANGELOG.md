@@ -4,6 +4,10 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Added — Asset × Evidence matrix (2026-10-06)
+- `docs/assets/EVIDENCE-MATRIX.md` + `.es.md`: 17 assets × methods with the observation type per cell (● validated Derived · ○ unvalidated visual check · ◐ exploratory · — none). Exposes the gaps: 11 of 17 assets have no VEIO-derived observation; methods 0001/0004 unvalidated; methane exploratory.
+- `scripts/check_docs.py` now fails if any asset in `registry/assets.csv` or any `METHOD-####` is missing from the matrix (EN + ES). README and PLATFORM link it.
+
 ### Changed — Apply ADR-001: generated figures removed from the repo (2026-10-06)
 - Removed `docs/methods/figures/*.png` (12 files) from git. Method figures are now generated locally under `data/derived/method-*/` by the scripts that produce them.
 - Updated `scripts/method0001_v03.py`, `method0002_v04.py`, `method0002_v05.py`, `method0003_validate.py` to write figures into their `data/derived/...` output directory.

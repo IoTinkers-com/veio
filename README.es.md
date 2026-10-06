@@ -19,7 +19,7 @@
 | `docs/adr/` | Registros de decisiones de arquitectura |
 | `docs/briefs/` | Feature briefs (dossier v0.1, indicadores de cambio v0.2) |
 | `docs/methods/` | Notas geo-method (hipótesis + plan de validación + resultados) + tablero `STATUS.md` |
-| `docs/assets/`, `registry/assets.csv` | Asset Dossiers (AST-0001..0017) y registro de activos |
+| `docs/assets/`, `registry/assets.csv` | Asset Dossiers (AST-0001..0017), `EVIDENCE-MATRIX.md` (activo × evidencia) y registro de activos |
 | `docs/datasets/`, `registry/datasets.csv` | Fichas de datasets (DS-0001..0015) y matriz |
 | `docs/reviews/` | Registros de revisión científica |
 | `scripts/` | Scripts de validación de métodos (reproducibles, con manifest) |
