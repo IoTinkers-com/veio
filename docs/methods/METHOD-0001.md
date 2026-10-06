@@ -57,9 +57,7 @@ Design changes: per-pixel medians on a common EPSG:4326 grid (WarpedVRT; no stre
 | T2 Petrocedeño fire (dNBR) | 51% of land pixels over threshold; signal covers all vegetation, industrial area neutral | **FAIL** — seasonal drying, not fire |
 | C2 Valencia urban | 3.6% pixels over threshold (criterion <0.5%) | **FAIL** |
 
-![T1](figures/METHOD-0001-v0.2-T1.png)
-![T2](figures/METHOD-0001-v0.2-T2.png)
-*Contains modified Copernicus Sentinel data 2025–2026 (processed by VEIO).*
+*Figures generated locally, not committed (ADR-001): `data/derived/method-0001/v0.2/T1_quicklook.png`, `T2_quicklook.png`. Contains modified Copernicus Sentinel data 2025–2026 (processed by VEIO).*
 
 - **Verdict: NOT validated** (pre-registered rule: C2 failed). No Derived observations added to dossiers.
 - Root cause (author error): v0.2 used **adjacent** pre/post windows, violating the redesign requirement of same-season interannual pairs written above; Oct–Nov → Dec–Jan spans dry-season onset, which drives dNBR everywhere. T1 detector has no bloom rejection.
@@ -86,9 +84,7 @@ Scope change: land detector only (dNBR interannual same-season). The Alula platf
 | C-urban Valencia | 0.074% pixels (criterion <0.5% ✓) but 15 components (criterion ≤1) | **FAIL** — urban areas have real small changes; component-count criterion unrealistic |
 | T-neg Bajo Grande | 5.9% pixels, 463 components | **FAIL** — control-design error: the ±5.5 km box contains all of Cabimas (real urban change) + lake wetlands, not just the refinery; strong change blob at the tank-farm area (consistent with reported storage activity, Chevron/Boscan — Reuters 2025-04) |
 
-![T-fire](figures/METHOD-0001-v0.3-T-fire.png)
-![T-neg](figures/METHOD-0001-v0.3-T-neg.png)
-*Contains modified Copernicus Sentinel data 2024–2026 (processed by VEIO).*
+*Figures generated locally, not committed (ADR-001): `data/derived/method-0001/v0.3/T-fire_quicklook.png`, `T-neg_quicklook.png`. Contains modified Copernicus Sentinel data 2024–2026 (processed by VEIO).*
 
 - **Verdict: NOT validated (as registered).** No Derived observations added to dossiers.
 - What v0.3 did prove: interannual same-month windows killed the seasonal confounder (José: 51% → 0.32% over threshold); the remaining failures are control-design errors, not detector noise.

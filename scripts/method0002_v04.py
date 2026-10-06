@@ -7,7 +7,7 @@ Pre-registered in docs/methods/METHOD-0002.md before execution.
   Metrics: detections, days detected, persistence %, mean/max FRP, day/night.
   Match : OGIM flaring detections within 1.5 km of a nucleus.
   Control: Bajo Grande box (no known flaring) -> expect no nucleus.
-Outputs: data/derived/method-0002/v0.4/ + figure in docs/methods/figures/.
+Outputs: data/derived/method-0002/v0.4/ (CSV/JSON + figure).
 Never prints the FIRMS key. Usage: py -3 scripts/method0002_v04.py
 """
 import csv
@@ -30,7 +30,6 @@ KEY = (ROOT / ".secrets" / "firms_mapkey.txt").read_text().strip()
 OUT = ROOT / "data" / "derived" / "method-0002" / "v0.4"
 RAW = ROOT / "data" / "raw" / "firms"
 OGIM = ROOT / "data" / "ogim_venezuela" / "Natural_Gas_Flaring_Detections.csv"
-FIGS = ROOT / "docs" / "methods" / "figures"
 SB_BOX = (-63.85, 9.45, -63.45, 9.80)
 CTRL_BOX = (-71.78, 10.55, -71.65, 10.67)      # Bajo Grande (no known flaring)
 SATS = ("VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT")
@@ -240,8 +239,8 @@ def figure(records):
     ax[1].set_title(f"{len(records)} nuclei, {DAYS}-day window")
     fig.suptitle("METHOD-0002 v0.4 - Santa Barbara per-nucleus flaring (NASA FIRMS)")
     fig.tight_layout()
-    FIGS.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIGS / "METHOD-0002-v0.4-santabarbara.png", dpi=110)
+    OUT.mkdir(parents=True, exist_ok=True)  # figures generated locally, never committed (ADR-001)
+    fig.savefig(OUT / "METHOD-0002-v0.4-santabarbara.png", dpi=110)
     plt.close(fig)
 
 

@@ -52,10 +52,7 @@ Design changes: daily VNP46A2 (`Gap_Filled_DNB_BRDF-Corrected_NTL`, Mandatory_Qu
 | C1 Canaima | daily: 2 valid baseline days → not evaluable; monthly < 1 nW all months | partial |
 | Context Valencia daily | z = −0.37; day-to-day range 58–142 nW | — |
 
-![T1 daily](figures/METHOD-0004-v0.2-T1.png)
-![T2 trend](figures/METHOD-0004-v0.2-T2.png)
-![NTL change west](figures/METHOD-0004-v0.2-change-west.png)
-*NASA Black Marble VNP46A2/A3 v002 (doi:10.5067/VIIRS/VNP46A2.002, VNP46A3.002); processed by VEIO.*
+*Figures generated locally, not committed (ADR-001): `data/derived/method-0004/v0.2/t1_daily.png`, `t2_trend.png`, `ntl_change_2025_vs_2023_west.png`. NASA Black Marble VNP46A2/A3 v002 (doi:10.5067/VIIRS/VNP46A2.002, VNP46A3.002); processed by VEIO.*
 
 - **Verdict: NOT validated.** No Derived observations added to dossiers.
 - **Correction to v0.1:** the "Maracaibo ~×2" candidate was a seasonal-mismatch artefact (May–Jul 2023 vs Aug–Oct 2025). Same-month figure: +40% vs Valencia +3% — descriptive statistic only, below the pre-registered threshold; not an observation.

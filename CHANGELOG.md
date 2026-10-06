@@ -4,6 +4,13 @@ All notable changes to this project are documented here. Format based on Keep a 
 
 ## [Unreleased]
 
+### Changed — Apply ADR-001: generated figures removed from the repo (2026-10-06)
+- Removed `docs/methods/figures/*.png` (12 files) from git. Method figures are now generated locally under `data/derived/method-*/` by the scripts that produce them.
+- Updated `scripts/method0001_v03.py`, `method0002_v04.py`, `method0002_v05.py`, `method0003_validate.py` to write figures into their `data/derived/...` output directory.
+- Method notes (0001–0004) and dossiers (AST-0009/0012/0014) now reference figures as **expected local paths** (inline code), not repository files.
+- `scripts/check_docs.py` now fails if any committed raster/figure is found (ADR-001). `docs/foundation/figures/pipeline.svg` is hand-authored source, not a generated artifact, and remains.
+- Historical CHANGELOG/LOG entries from before this change still mention `docs/methods/figures/` — they are records of that time and are not rewritten.
+
 ### Added — ADR-001 + local workbench brief (2026-10-06)
 - `docs/adr/ADR-001-no-generated-artifacts-in-repo.md`: **Accepted** — the repository holds only code, metadata and text; no generated artifact (raster, layer, figure, derived JSON) is committed; outputs are generated locally and, for the future public Atlas, served from object storage.
 - `docs/briefs/FEATURE-local-workbench-v0.1.md`: docker-compose local workbench (download → process → display) for researchers; PUBLIC datasets only; DS-0007 excluded; nothing written outside `./data`.

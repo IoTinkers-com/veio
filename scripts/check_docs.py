@@ -9,6 +9,7 @@ Fails (exit 1) when the public docs drift from the repo:
   3. Derived observations: every `**Derived**` line in a dossier cites a
      METHOD-#### that has a method note (and a manifest path).
   4. Bilingual orphans: a `X.es.md` without its `X.md` sibling.
+  5. No generated artifacts in the repo (ADR-001): no committed raster/figure.
 
 Usage: py -3 scripts/check_docs.py
 """
@@ -91,12 +92,30 @@ def check_orphans():
             errors.append(f"orphan Spanish doc (no English twin): {f.relative_to(ROOT).as_posix()}")
 
 
+GENERATED_SUFFIXES = {".png", ".tif", ".tiff", ".jpg", ".jpeg"}
+SKIP_PARTS = {".git", "node_modules", ".venv", "__pycache__", "data"}
+
+
+def check_no_generated_artifacts():
+    """ADR-001: no generated artifact (raster/figure) may be committed."""
+    for f in ROOT.rglob("*"):
+        if not f.is_file():
+            continue
+        rel = f.relative_to(ROOT)
+        if any(part in SKIP_PARTS for part in rel.parts):
+            continue
+        if f.suffix.lower() in GENERATED_SUFFIXES:
+            errors.append(f"generated artifact in repo (ADR-001): {rel.as_posix()} "
+                          "(generate locally under data/ instead)")
+
+
 def main():
     check_registry("registry/datasets.csv", "DS", "docs/datasets")
     check_registry("registry/assets.csv", "AST", "docs/assets")
     check_methods()
     check_derived()
     check_orphans()
+    check_no_generated_artifacts()
     if errors:
         print(f"DOCS DRIFT: {len(errors)} problem(s)")
         for e in errors:

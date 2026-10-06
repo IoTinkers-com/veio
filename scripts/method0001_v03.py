@@ -7,7 +7,7 @@ Pre-registered in docs/methods/METHOD-0001.md before execution:
 Reuse of the v0.2 pipeline (same masking, grid, thresholds).
 
 Usage: py -3 scripts/method0001_v03.py
-Outputs: data/derived/method-0001/v0.3/ + figures in docs/methods/figures/.
+Outputs: data/derived/method-0001/v0.3/ (rasters + quicklook figures).
 """
 import hashlib
 import json
@@ -22,7 +22,6 @@ import numpy as np  # noqa: E402
 from rasterio.transform import from_origin  # noqa: E402
 
 OUT = base.ROOT / "data" / "derived" / "method-0001" / "v0.3"
-FIGS = base.ROOT / "docs" / "methods" / "figures"
 WINDOWS = {"pre": ("2024-12-01", "2025-01-31"), "post": ("2025-12-01", "2026-01-31")}
 TESTS = {
     "T-fire": {"box": (-64.914, 10.019, -64.814, 10.119), "detector": "dnbr",
@@ -73,8 +72,9 @@ def run(test_id):
         rgb_pre, rgb_post = base.rgb_u8(pre, post)
         base.write_tif(OUT / f"{test_id}_rgb_pre.tif", rgb_pre, transform, "uint8", 0)
         base.write_tif(OUT / f"{test_id}_rgb_post.tif", rgb_post, transform, "uint8", 0)
+        FIGS = OUT  # figures are generated locally, never committed (ADR-001)
         FIGS.mkdir(parents=True, exist_ok=True)
-        base.quicklook(FIGS / f"METHOD-0001-v0.3-{test_id}.png", rgb_pre, rgb_post,
+        base.quicklook(FIGS / f"{test_id}_quicklook.png", rgb_pre, rgb_post,
                        delta_masked, feats, transform,
                        f"METHOD-0001 v0.3 {test_id}: {cfg['label']}", base.THR_DNBR)
     return res

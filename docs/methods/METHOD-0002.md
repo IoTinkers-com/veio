@@ -71,8 +71,7 @@ Window 2026-07-07..2026-10-04 (90 days), VIIRS NOAA-20 + S-NPP: **11,480 hotspot
 | 7 | 68 | 31 | 34.4% | 1.3 | 3.8 | 4 |
 | 16 | 5 | 3 | 3.3% | 1.3 | 2.1 | 0 |
 
-![nuclei](figures/METHOD-0002-v0.4-santabarbara.png)
-*Contains modified NASA FIRMS data (VIIRS NOAA-20 + S-NPP).*
+*Figure generated locally, not committed (ADR-001): `data/derived/method-0002/v0.4/METHOD-0002-v0.4-santabarbara.png`. Contains modified NASA FIRMS data (VIIRS NOAA-20 + S-NPP).*
 
 - **Verdict: NOT validated as registered** (C3 failed). The **per-nucleus structure and persistence are robust** (C1/C2/C4 pass; 8 of 9 nuclei on ≥30% of 90 days), but the OGIM cross-match at 1.5 km reaches only 60.3% (< 70%). No Derived observation added to dossiers.
 - Implementation note: the first verdict computed C3 against the nucleus **centroid** (19.2%); corrected to nucleus **membership** (per the wording "within 1.5 km of a nucleus") → 60.3%. The criterion was not changed; verdict unchanged. Diagnostic (not criteria): 3 km → 73.1%, 5 km → 91.0%.
@@ -120,8 +119,7 @@ Window 2026-07-07..2026-10-04 (90 days), VIIRS N20 + S-NPP, 11,480 hotspots in t
 
 OGIM co-location (descriptive, not a criterion): 60.3% within 1.5 km, 73.1% within 3 km, 91.0% within 5 km. OGIM's own within-facility spread reaches 17.0 km (Santa Bárbara Sur), 10.3 (Santa Bárbara), 10.1 (Cotoperí), 9.3 (Jusepín), 7.9 (Carito-Mulata) km — a 1.5 km point match is not meaningful for this product.
 
-![nuclei](figures/METHOD-0002-v0.5-santabarbara.png)
-*Contains modified NASA FIRMS data (VIIRS NOAA-20 + S-NPP).*
+*Figure generated locally, not committed (ADR-001): `data/derived/method-0002/v0.5/METHOD-0002-v0.5-santabarbara.png`. Contains modified NASA FIRMS data (VIIRS NOAA-20 + S-NPP).*
 
 - **Verdict: VALIDATED (scope-limited) for fixed, persistent, night-active thermal point sources.** All of C1–C5 pass; the Santa Bárbara cluster resolves into 9 spatially distinct nuclei, 8 of them detected on ≥30% of a 90-day window, night-active (median 87.3%) and stationary (median drift ≤1 km) — the signature of continuous flaring, not transient/diurnal biomass burning.
 - FRP is instantaneous radiative power (MW) per overpass, **not** an emitted volume or energy; totals are detection-weighted sums and are not reported as emissions.

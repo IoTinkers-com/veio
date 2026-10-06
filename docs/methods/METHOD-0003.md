@@ -38,8 +38,7 @@
 
 Supplementary (not scored): at the same point, ascending geometry (track 4) steps from −4/−6 dB (Jun–Aug) to +0…+5 dB (Sep–Nov) — the change is visible in two independent geometries, consistent with a physical object rather than a wind artifact. An independent eastern-lake screening at ~55 m found no compact new persistent object in open water (only 3 isolated 1-px coastal detections).
 
-![T-Alula](figures/METHOD-0003-v0.1-ALULA.png)
-*Contains modified Copernicus Sentinel data 2025 (processed by VEIO).*
+*Figure generated locally, not committed (ADR-001): `data/derived/method-0003/v0.1/METHOD-0003-v0.1-ALULA.png`. Contains modified Copernicus Sentinel data 2025 (processed by VEIO).*
 
 - **Verdict: VALIDATED (scope-limited).** Passed all pre-registered criteria (b28e66c): ≥1 new persistent radar-bright object in the Lagunillas box in the reported month, and 0 in both open-lake controls. One Derived observation added to AST-0009.
 - **Scope:** validated only for *detecting a new persistent radar-bright object over pre-window dark water* in a fixed box. **Not** validated for object identity, for vessel counts, or for open-water platform/vessel detection (screening negative).

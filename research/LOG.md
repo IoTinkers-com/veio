@@ -120,3 +120,9 @@
 - Decisión (Opción A del steward): el repo público solo guarda código + metadatos + texto; ninguna figura/capa/ráster/JSON derivado se commitea. Se genera en local con la app; el Atlas público futuro usará object storage. Registrado en ADR-001 (Accepted).
 - Escrito `docs/briefs/FEATURE-local-workbench-v0.1.md`: docker-compose (web MapLibre + api/worker FastAPI + tiles TiTiler + volumen ./data); usuario investigador; descargar→procesar→ver; PUBLIC sin claves en v1; DS-0007 excluido; nada fuera de ./data.
 - Migración pendiente (ADR-001): quitar `docs/methods/figures/*.png` del repo, convertir enlaces de figuras en METHOD/dossiers a rutas locales esperadas, ajustar check_docs/link-check. Next: ejecutar esa migración o el brief METHOD-0005 (CH4).
+
+## 2026-10-06 — devin (GLM) — Migración ADR-001 ejecutada (figuras fuera del repo)
+- `git rm docs/methods/figures/*.png` (12 figuras). Ahora se generan en local: los scripts 0001 v0.3, 0002 v0.4/v0.5, 0003 v0.1 escriben la figura en su salida `data/derived/method-*/`.
+- Notas METHOD-0001..0004 y dossiers AST-0009/0012/0014: referencias de figuras convertidas a rutas locales esperadas (código en línea), no archivos del repo.
+- `check_docs.py` ampliado: falla si hay cualquier ráster/figura commiteada (ADR-001). El SVG del pipeline se mantiene (fuente dibujada a mano, no generada). Registry↔archivos, METHOD↔STATUS, citas Derived, huérfanos ES: OK.
+- Repo alineado a ADR-001: solo código + metadatos + texto. Next: Matriz Activo × Evidencia o arrancar el workbench (brief ya escrito).

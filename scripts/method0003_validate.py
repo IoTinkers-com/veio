@@ -16,7 +16,7 @@ Design:
 
 Input : DS-0002 Sentinel-1 RTC (Sentinel-1A, descending relative orbit 171),
         VV gamma0, Microsoft Planetary Computer STAC.
-Output: data/derived/method-0003/v0.1/ + figures in docs/methods/figures/.
+Output: data/derived/method-0003/v0.1/ (rasters + quicklook figures).
 
 Usage: py -3 scripts/method0003_validate.py [ALULA LAGO_SUR LAGO_OESTE]
 """
@@ -46,7 +46,6 @@ from scipy import ndimage  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "derived" / "method-0003" / "v0.1"
-FIGS = ROOT / "docs" / "methods" / "figures"
 CACHE = Path(os.environ.get("M0003_CACHE", Path(os.environ.get("TEMP", ".")) / "m0003_cache"))
 STAC_URL = "https://planetarycomputer.microsoft.com/api/stac/v1"
 COLLECTION = "sentinel-1-rtc"
@@ -230,8 +229,8 @@ def quicklook(name, mp, ms, change, feats, transform):
                     f"S1A track {TRACK} descending VV")
     fig.suptitle(f"METHOD-0003 v0.1 {name}")
     fig.tight_layout()
-    FIGS.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIGS / f"METHOD-0003-v0.1-{name}.png", dpi=110)
+    OUT.mkdir(parents=True, exist_ok=True)  # figures generated locally, never committed (ADR-001)
+    fig.savefig(OUT / f"METHOD-0003-v0.1-{name}.png", dpi=110)
     plt.close(fig)
 
 

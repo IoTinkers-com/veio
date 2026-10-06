@@ -29,7 +29,6 @@ KEY = (ROOT / ".secrets" / "firms_mapkey.txt").read_text().strip()
 OUT = ROOT / "data" / "derived" / "method-0002" / "v0.5"
 RAW = ROOT / "data" / "raw" / "firms"
 OGIM = ROOT / "data" / "ogim_venezuela" / "Natural_Gas_Flaring_Detections.csv"
-FIGS = ROOT / "docs" / "methods" / "figures"
 SB_BOX = (-63.85, 9.45, -63.45, 9.80)
 CTRL_BOX = (-71.78, 10.55, -71.65, 10.67)
 SATS = ("VIIRS_SNPP_NRT", "VIIRS_NOAA20_NRT")
@@ -233,8 +232,8 @@ def figure(records):
     ax[1].set_title("Fixed sources = high persistence, low drift"); ax[1].legend()
     fig.suptitle("METHOD-0002 v0.5 - Santa Barbara nuclei: fixed, persistent, night-active (NASA FIRMS)")
     fig.tight_layout()
-    FIGS.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIGS / "METHOD-0002-v0.5-santabarbara.png", dpi=110)
+    OUT.mkdir(parents=True, exist_ok=True)  # figures generated locally, never committed (ADR-001)
+    fig.savefig(OUT / "METHOD-0002-v0.5-santabarbara.png", dpi=110)
     plt.close(fig)
 
 
